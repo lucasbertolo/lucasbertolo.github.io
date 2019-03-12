@@ -1,7 +1,5 @@
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
-////////////////////////////////////////////////////////////////////////////////
-// createHistory(source) - wraps a history source
 var getLocation = function getLocation(source) {
   return _extends({}, source.location, {
     state: source.history.state,
@@ -33,7 +31,7 @@ var createHistory = function createHistory(source, options) {
 
       var popstateListener = function popstateListener() {
         location = getLocation(source);
-        listener();
+        listener({ location: location, action: "POP" });
       };
 
       source.addEventListener("popstate", popstateListener);
@@ -68,8 +66,8 @@ var createHistory = function createHistory(source, options) {
       var transition = new Promise(function (res) {
         return resolveTransition = res;
       });
-      listeners.forEach(function (fn) {
-        return fn();
+      listeners.forEach(function (listener) {
+        return listener({ location: location, action: "PUSH" });
       });
       return transition;
     }

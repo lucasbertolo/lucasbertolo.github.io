@@ -8,5 +8,5 @@ exports.components = {
   "component---src-pages-page-2-js": () => import("/Users/lucasbertolo/Desktop/projects/lucasbertolo/portfolio-lucas/src/pages/page-2.js" /* webpackChunkName: "component---src-pages-page-2-js" */)
 }
 
-exports.data = () => import("/Users/lucasbertolo/Desktop/projects/lucasbertolo/portfolio-lucas/.cache/data.json")
+exports.data = () => import(/* webpackChunkName: "pages-manifest" */ "/Users/lucasbertolo/Desktop/projects/lucasbertolo/portfolio-lucas/.cache/data.json")
 

@@ -89,13 +89,22 @@ class IndexPage extends React.Component {
       }
     }
   }
+  resetInput = () => {
+    let contactName = document.querySelector('#name');
+    let contactMessage = document.querySelector('#message');
+    let contactEmail = document.querySelector('#email');
+
+    contactName.value = '';
+    contactMessage.value = '';
+    contactEmail.value = '';
+  }
 
   onSubmit = () => {  
-    const contactName = document.querySelector('#name').value;
-    const contactMessage = document.querySelector('#message').value;
-    const contactEmail = document.querySelector('#email').value;
+    let contactName = document.querySelector('#name');
+    let contactMessage = document.querySelector('#message');
+    let contactEmail = document.querySelector('#email');
 
-    if(contactEmail.length === 0 || contactName.length === 0 || contactMessage.length === 0){
+    if(contactEmail.value.length === 0 || contactName.value.length === 0 || contactMessage.value.length === 0){
          this.setState({
               sendStatus: "Campo vazio!!"
             })
@@ -105,9 +114,9 @@ class IndexPage extends React.Component {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
-          email: contactEmail,
-          message: contactMessage,
-          name: contactName
+          email: contactEmail.value,
+          message: contactMessage.value,
+          name: contactName.value
         })
       })
         .then(response => response.json())
@@ -116,6 +125,10 @@ class IndexPage extends React.Component {
             this.setState({
               sendStatus: "Enviada com sucesso"
             })
+
+            contactName.value = '';
+            contactMessage.value = '';
+            contactEmail.value = '';
           } 
         })  
         .catch(err => {
@@ -140,6 +153,7 @@ class IndexPage extends React.Component {
               onCloseArticle={this.handleCloseArticle}
               setWrapperRef={this.setWrapperRef}
               onSubmit={this.onSubmit}
+              resetInput={this.resetInput}
               sendStatus={this.state.sendStatus}
             />
             <Footer timeout={this.state.timeout} />

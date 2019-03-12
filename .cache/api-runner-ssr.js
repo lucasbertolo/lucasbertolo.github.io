@@ -3,7 +3,10 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/lucasbertolo/Desktop/projects/lucasbertolo/portfolio-lucas/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"Lucas Bertolo - Resume","short_name":"Resume","start_url":"/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/logo.png"},
+      options: {"plugins":[],"name":"Lucas Bertolo - Portfolio","short_name":"Portfolio","start_url":"https://lucasbertolo.github.io/","background_color":"#663399","theme_color":"#663399","display":"minimal-ui","icon":"src/images/logo.png"},
+    },{
+      plugin: require('/Users/lucasbertolo/Desktop/projects/lucasbertolo/portfolio-lucas/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
+      options: {"plugins":[]},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

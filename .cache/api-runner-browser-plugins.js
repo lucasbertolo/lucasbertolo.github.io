@@ -1,4 +1,4 @@
 module.exports = [{
-      plugin: require('/Users/lucasbertolo/Desktop/projects/lucasbertolo/portfolio-lucas/node_modules/gatsby-plugin-offline/gatsby-browser'),
+      plugin: require('/Users/lucasbertolo/Desktop/projects/lucasbertolo/portfolio-lucas/node_modules/gatsby-plugin-offline/gatsby-browser.js'),
       options: {"plugins":[]},
     }]

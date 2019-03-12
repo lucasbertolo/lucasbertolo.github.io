@@ -1,9 +1,5 @@
 /// Adding background to the portfolio pictures
 
-@mixin imagePort($property) {
-  background: url($property) no-repeat center center;
-  background-size: cover;
-}
 
 
 /// Makes an element's :before pseudoelement a FontAwesome icon.
