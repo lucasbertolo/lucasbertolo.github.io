@@ -16,10 +16,6 @@ class IndexPage extends React.Component {
       loading: 'is-loading',
       sendStatus: ''
     }
-    this.handleOpenArticle = this.handleOpenArticle.bind(this)
-    this.handleCloseArticle = this.handleCloseArticle.bind(this)
-    this.setWrapperRef = this.setWrapperRef.bind(this);
-    this.handleClickOutside = this.handleClickOutside.bind(this);
   }
 
   componentDidMount () {
@@ -36,11 +32,11 @@ class IndexPage extends React.Component {
     document.removeEventListener('mousedown', this.handleClickOutside);
   }
 
-  setWrapperRef(node) {
+  setWrapperRef = (node) => {
     this.wrapperRef = node;
   }
 
-  handleOpenArticle(article) {
+  handleOpenArticle = (article) =>  {
 
     this.setState({
       isArticleVisible: !this.state.isArticleVisible,
@@ -61,7 +57,7 @@ class IndexPage extends React.Component {
 
   }
 
-  handleCloseArticle() {
+  handleCloseArticle = () =>{
 
     this.setState({
       articleTimeout: !this.state.articleTimeout
@@ -82,13 +78,14 @@ class IndexPage extends React.Component {
 
   }
 
-  handleClickOutside(event) {
+  handleClickOutside = (event) => {
     if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
       if (this.state.isArticleVisible) {
         this.handleCloseArticle();
       }
     }
   }
+  
   resetInput = () => {
     let contactName = document.querySelector('#name');
     let contactMessage = document.querySelector('#message');
