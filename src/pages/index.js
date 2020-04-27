@@ -110,7 +110,7 @@ class IndexPage extends React.Component {
             })
     } else {    
       this.setState({sendStatus: 'Enviando ...'})
-      fetch('https://secure-waters-51389.herokuapp.com/contact', {
+      fetch('https://dry-island-26655.herokuapp.com/contactLucasBertolo', {
         method: 'post',
         headers: {'Content-Type': 'application/json'},
         body: JSON.stringify({
