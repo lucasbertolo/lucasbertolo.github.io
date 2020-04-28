@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import Intro from './Intro';
 import Work from './Work';
@@ -11,11 +10,11 @@ class Main extends React.Component {
     const {
       onCloseArticle,
       setWrapperRef,
-      timeout, 
+      timeout,
       article,
       articleTimeout,
-      onSubmit, 
-      resetInput, 
+      onSubmit,
+      resetInput,
       sendStatus,
     } = this.props;
 
@@ -31,31 +30,35 @@ class Main extends React.Component {
     return (
       <div ref={setWrapperRef} id="main" style={timeout ? { display: 'flex' } : { display: 'none' }}>
 
-        <article 
-          id="intro" 
-          className={`${article === 'intro' ? 'active' : ''} ${articleTimeout ? 'timeout' : ''}`} 
-          style={{ display: 'none' }}>
+        <article
+          id="intro"
+          className={`${article === 'intro' ? 'active' : ''} ${articleTimeout ? 'timeout' : ''}`}
+          style={{ display: 'none' }}
+        >
           <Intro close={close} />
         </article>
 
-        <article 
-          id="work" 
-          className={`${article === 'work' ? 'active' : ''} ${articleTimeout ? 'timeout' : ''}`} 
-          style={{ display: 'none' }}>
+        <article
+          id="work"
+          className={`${article === 'work' ? 'active' : ''} ${articleTimeout ? 'timeout' : ''}`}
+          style={{ display: 'none' }}
+        >
           <Work close={close} />
         </article>
 
-        <article 
-          id="about" 
-          className={`${article === 'about' ? 'active' : ''} ${articleTimeout ? 'timeout' : ''}`} 
-          style={{ display: 'none' }}>
+        <article
+          id="about"
+          className={`${article === 'about' ? 'active' : ''} ${articleTimeout ? 'timeout' : ''}`}
+          style={{ display: 'none' }}
+        >
           <About close={close} />
         </article>
 
-        <article 
-          id="contact" 
-          className={`${article === 'contact' ? 'active' : ''} ${articleTimeout ? 'timeout' : ''}`} 
-          style={{ display: 'none' }}>
+        <article
+          id="contact"
+          className={`${article === 'contact' ? 'active' : ''} ${articleTimeout ? 'timeout' : ''}`}
+          style={{ display: 'none' }}
+        >
           <Contact
             close={close}
             onSubmit={onSubmit}
@@ -68,17 +71,5 @@ class Main extends React.Component {
     );
   }
 }
-
-Main.propTypes = {
-  route: PropTypes.object,
-  article: PropTypes.string,
-  articleTimeout: PropTypes.bool,
-  onCloseArticle: PropTypes.func,
-  timeout: PropTypes.bool,
-  setWrapperRef: PropTypes.func.isRequired,
-  onSubmit: PropTypes.func,
-  resetInput: PropTypes.func,
-  sendStatus: PropTypes.string,
-};
 
 export default Main;
