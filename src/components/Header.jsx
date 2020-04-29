@@ -16,14 +16,49 @@ const Header = ({ onOpenArticle, timeout }) => (
     </div>
     <nav>
       <ul>
-        <li><a href="javascript:;" onClick={() => { onOpenArticle('intro'); }}>Currículo</a></li>
-        <li><a href="javascript:;" onClick={() => { onOpenArticle('work'); }}>Portfolio</a></li>
-        <li><a href="javascript:;" onClick={() => { onOpenArticle('about'); }}>Sobre</a></li>
-        <li><a href="javascript:;" onClick={() => { onOpenArticle('contact'); }}>Contato</a></li>
+        <li>
+          <a
+            href="javascript:;"
+            onClick={() => {
+              onOpenArticle('intro');
+            }}
+          >
+            Currículo
+          </a>
+        </li>
+        <li>
+          <a
+            href="javascript:;"
+            onClick={() => {
+              onOpenArticle('work');
+            }}
+          >
+            Portfolio
+          </a>
+        </li>
+        <li>
+          <a
+            href="javascript:;"
+            onClick={() => {
+              onOpenArticle('about');
+            }}
+          >
+            Sobre
+          </a>
+        </li>
+        <li>
+          <a
+            href="javascript:;"
+            onClick={() => {
+              onOpenArticle('contact');
+            }}
+          >
+            Contato
+          </a>
+        </li>
       </ul>
     </nav>
   </header>
 );
-
 
 export default Header;

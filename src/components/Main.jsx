@@ -28,11 +28,16 @@ class Main extends React.Component {
     );
 
     return (
-      <div ref={setWrapperRef} id="main" style={timeout ? { display: 'flex' } : { display: 'none' }}>
-
+      <div
+        ref={setWrapperRef}
+        id="main"
+        style={timeout ? { display: 'flex' } : { display: 'none' }}
+      >
         <article
           id="intro"
-          className={`${article === 'intro' ? 'active' : ''} ${articleTimeout ? 'timeout' : ''}`}
+          className={`${article === 'intro' ? 'active' : ''} ${
+            articleTimeout ? 'timeout' : ''
+          }`}
           style={{ display: 'none' }}
         >
           <Intro close={close} />
@@ -40,7 +45,9 @@ class Main extends React.Component {
 
         <article
           id="work"
-          className={`${article === 'work' ? 'active' : ''} ${articleTimeout ? 'timeout' : ''}`}
+          className={`${article === 'work' ? 'active' : ''} ${
+            articleTimeout ? 'timeout' : ''
+          }`}
           style={{ display: 'none' }}
         >
           <Work close={close} />
@@ -48,7 +55,9 @@ class Main extends React.Component {
 
         <article
           id="about"
-          className={`${article === 'about' ? 'active' : ''} ${articleTimeout ? 'timeout' : ''}`}
+          className={`${article === 'about' ? 'active' : ''} ${
+            articleTimeout ? 'timeout' : ''
+          }`}
           style={{ display: 'none' }}
         >
           <About close={close} />
@@ -56,7 +65,9 @@ class Main extends React.Component {
 
         <article
           id="contact"
-          className={`${article === 'contact' ? 'active' : ''} ${articleTimeout ? 'timeout' : ''}`}
+          className={`${article === 'contact' ? 'active' : ''} ${
+            articleTimeout ? 'timeout' : ''
+          }`}
           style={{ display: 'none' }}
         >
           <Contact
@@ -66,7 +77,6 @@ class Main extends React.Component {
             sendStatus={sendStatus}
           />
         </article>
-
       </div>
     );
   }
