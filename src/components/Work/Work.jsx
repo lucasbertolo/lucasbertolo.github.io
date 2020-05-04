@@ -1,5 +1,5 @@
 import React from 'react';
-import projects from '../assets/sources';
+import projects from '../../assets/sources';
 
 const Work = ({ close }) => (
   <div>

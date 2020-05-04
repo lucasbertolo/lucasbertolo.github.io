@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import Footer from '../components/Footer';
-import Header from '../components/Header';
+import Footer from '../components/Footer/Footer';
+import Header from '../components/Header/Header';
 import Layout from '../components/layout';
-import Main from '../components/Main';
+import Main from '../components/Main/Main';
 
-// eslint-disable-next-line react/prop-types
 const IndexPage = ({ location }) => {
   const [isArticleVisible, setIsArticleVisible] = useState(false);
   const [timer, setTimer] = useState(false);

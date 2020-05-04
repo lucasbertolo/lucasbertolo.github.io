@@ -1,9 +1,9 @@
 import React from 'react';
 
-import Intro from './Intro';
-import Work from './Work';
-import About from './About';
-import Contact from './Contact';
+import Intro from '../Intro/Intro';
+import Work from '../Work/Work';
+import About from '../About/About';
+import Contact from '../Contact/Contact';
 
 class Main extends React.Component {
   render() {
