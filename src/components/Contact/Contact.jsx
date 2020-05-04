@@ -1,83 +1,86 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
+import React, { useReducer } from 'react';
+import { Fields } from './Fields/Fields';
+import { Actions } from './Actions/Actions';
+import { Social } from './Social/Social';
 
-const Contact = ({ resetInput, sendStatus, onSubmit, close }) => (
-  <div>
-    <h2 className="major">Contato</h2>
-    <div className="form">
-      <div className="field half first">
-        <label htmlFor="name">Nome</label>
-        <input type="text" name="name" id="name" />
+const Contact = ({ close }) => {
+  const INITIAL_STATE = {
+    name: '',
+    message: '',
+    email: '',
+    status: '',
+  };
+
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case 'SET_VALUES':
+        return { ...state, [action.payload.name]: action.payload.value };
+      case 'SET_STATUS':
+        return { ...state, status: action.payload };
+      case 'CLEAR_VALUES':
+        return { ...state, name: '', message: '', email: '' };
+      default:
+        return state;
+    }
+  };
+
+  const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
+
+  const setStatus = msg => dispatch({ type: 'SET_STATUS', payload: msg });
+
+  const setValues = (name, e) => {
+    dispatch({
+      type: 'SET_VALUES',
+      payload: { name, value: e.target.value },
+    });
+  };
+
+  const clearValues = () => dispatch({ type: 'CLEAR_VALUES' });
+
+  const { name, message, email, status } = state;
+
+  const onSubmit = () => {
+    if (email.length === 0 || name.length === 0 || message.length === 0) {
+      setStatus('Campo(s) vazio');
+    } else {
+      setStatus('Enviando...');
+
+      fetch('https://dry-island-26655.herokuapp.com/contactLucasBertolo', {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, message, name }),
+      })
+        .then(response => response.json())
+        .then(res => {
+          if (res.status === 200) {
+            setStatus('Enviada com sucesso!!');
+          } else {
+            setStatus('Algo deu errado, tente novamente mais tarde');
+          }
+          clearValues();
+        })
+        .catch(() => {
+          setStatus('Algo deu errado, tente novamente mais tarde');
+        });
+    }
+  };
+
+  return (
+    <section>
+      <h2 className="major">Contato</h2>
+      <div className="form">
+        <Fields
+          setValues={setValues}
+          name={name}
+          email={email}
+          message={message}
+        />
+        <Actions onSubmit={onSubmit} resetInput={clearValues} status={status} />
       </div>
-      <div className="field half">
-        <label htmlFor="email">Email</label>
-        <input type="text" name="email" id="email" />
-      </div>
-      <div className="field">
-        <label htmlFor="message">Mensagem</label>
-        <textarea name="message" id="message" rows="4" />
-      </div>
-      <ul className="actions">
-        <li>
-          <input
-            type="submit"
-            value="Enviar Mensagem"
-            className="special"
-            onClick={onSubmit}
-          />
-        </li>
-        <li>
-          <input type="reset" value="Limpar" onClick={resetInput} />
-        </li>
-        <li>
-          <h3 style={{ marginTop: '10px' }}>{sendStatus}</h3>
-        </li>
-      </ul>
-    </div>
-    <ul className="icons">
-      <li>
-        <a
-          href="https://www.linkedin.com/in/lucas-bertolo-97515492/"
-          className="icon fa-linkedin"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="label">Linkedin</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.facebook.com/lucas.bertolo2"
-          className="icon fa-facebook"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="label">Facebook</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.instagram.com/lucas.bertolo2/"
-          className="icon fa-instagram"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="label">Instagram</span>
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/lucasbertolo"
-          className="icon fa-github"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span className="label">GitHub</span>
-        </a>
-      </li>
-    </ul>
-    {close}
-  </div>
-);
+      <Social />
+      {close}
+    </section>
+  );
+};
 
 export default Contact;

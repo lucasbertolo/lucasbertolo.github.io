@@ -10,7 +10,6 @@ const IndexPage = ({ location }) => {
   const [articleTimeout, setArticleTimeout] = useState(false);
   const [article, setArticle] = useState('');
   const [loading, setLoading] = useState('is-loading');
-  const [sendStatus, setSendStatus] = useState('');
   const [wrapperRef, setWrapperRef] = useState(null);
 
   const handleCloseArticle = () => {
@@ -47,55 +46,6 @@ const IndexPage = ({ location }) => {
     }, 350);
   };
 
-  const resetInput = () => {
-    const contactName = document.querySelector('#name');
-    const contactMessage = document.querySelector('#message');
-    const contactEmail = document.querySelector('#email');
-
-    contactName.value = '';
-    contactMessage.value = '';
-    contactEmail.value = '';
-  };
-
-  const onSubmit = () => {
-    const contactName = document.querySelector('#name');
-    const contactMessage = document.querySelector('#message');
-    const contactEmail = document.querySelector('#email');
-
-    if (
-      contactEmail.value.length === 0 ||
-      contactName.value.length === 0 ||
-      contactMessage.value.length === 0
-    ) {
-      setSendStatus('Campo vazio!!');
-    } else {
-      setSendStatus('Enviando ...');
-
-      fetch('https://dry-island-26655.herokuapp.com/contactLucasBertolo', {
-        method: 'post',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          email: contactEmail.value,
-          message: contactMessage.value,
-          name: contactName.value,
-        }),
-      })
-        .then(response => response.json())
-        .then(message => {
-          if (message) {
-            setSendStatus('Enviada com sucesso!!');
-
-            contactName.value = '';
-            contactMessage.value = '';
-            contactEmail.value = '';
-          }
-        })
-        .catch(() => {
-          setSendStatus('Algo deu errado, tente novamente mais tarde');
-        });
-    }
-  };
-
   useEffect(() => {
     setTimeout(() => setLoading(''), 250);
     document.addEventListener('mousedown', handleClickOutside);
@@ -120,9 +70,6 @@ const IndexPage = ({ location }) => {
             article={article}
             onCloseArticle={handleCloseArticle}
             setWrapperRef={setWrapperRef}
-            onSubmit={onSubmit}
-            resetInput={resetInput}
-            sendStatus={sendStatus}
           />
           <Footer timeout={timer} />
         </div>
