@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+import emailjs from 'emailjs-com';
 import { Fields } from './Fields/Fields';
 import { Actions } from './Actions/Actions';
 import { Social } from './Social/Social';
@@ -39,30 +40,32 @@ const Contact = ({ close }) => {
 
   const { name, message, email, status } = state;
 
-  const onSubmit = () => {
+  const sendFeedback = (templateId, variables) => {
+    emailjs
+      .send('gmail', templateId, variables, process.env.USER_ID)
+      .then(res => {
+        if (res.status === 200) {
+          setStatus('Email enviado com sucesso');
+          clearValues();
+        } else setStatus('Erro no envio, tente novamente mais tarde');
+      })
+      .catch(() => setStatus('Erro no envio, tente novamente mais tarde'));
+  };
+
+  const handleSubmit = () => {
     if (email.length === 0 || name.length === 0 || message.length === 0) {
       setStatus('Campo(s) vazio');
-    } else {
-      setStatus('Enviando...');
-
-      fetch('https://dry-island-26655.herokuapp.com/contactLucasBertolo', {
-        method: 'post',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, message, name }),
-      })
-        .then(response => response.json())
-        .then(res => {
-          if (res.status === 200) {
-            setStatus('Enviada com sucesso!!');
-          } else {
-            setStatus('Algo deu errado, tente novamente mais tarde');
-          }
-          clearValues();
-        })
-        .catch(() => {
-          setStatus('Algo deu errado, tente novamente mais tarde');
-        });
+      return;
     }
+
+    setStatus('Enviando...');
+    const templateId = 'template_D0l322F4';
+
+    sendFeedback(templateId, {
+      message_html: message,
+      name,
+      email,
+    });
   };
 
   return (
@@ -75,7 +78,11 @@ const Contact = ({ close }) => {
           email={email}
           message={message}
         />
-        <Actions onSubmit={onSubmit} resetInput={clearValues} status={status} />
+        <Actions
+          onSubmit={handleSubmit}
+          resetInput={clearValues}
+          status={status}
+        />
       </div>
       <Social />
       {close}
