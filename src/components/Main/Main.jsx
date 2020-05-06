@@ -5,11 +5,10 @@ import Work from '../Work/Work';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
 
-class Main extends React.Component {
+class Main extends React.PureComponent {
   render() {
     const {
       onCloseArticle,
-      setWrapperRef,
       timeout,
       article,
       articleTimeout,
@@ -29,7 +28,6 @@ class Main extends React.Component {
 
     return (
       <div
-        ref={setWrapperRef}
         id="main"
         style={timeout ? { display: 'flex' } : { display: 'none' }}
       >

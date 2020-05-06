@@ -10,7 +10,6 @@ const IndexPage = ({ location }) => {
   const [articleTimeout, setArticleTimeout] = useState(false);
   const [article, setArticle] = useState('');
   const [loading, setLoading] = useState('is-loading');
-  const [wrapperRef, setWrapperRef] = useState(null);
 
   const handleCloseArticle = () => {
     setArticleTimeout(!articleTimeout);
@@ -23,14 +22,6 @@ const IndexPage = ({ location }) => {
       setIsArticleVisible(!isArticleVisible);
       setArticle('');
     }, 350);
-  };
-
-  const handleClickOutside = event => {
-    if (wrapperRef && wrapperRef.contains(event.current.target)) {
-      if (isArticleVisible) {
-        handleCloseArticle();
-      }
-    }
   };
 
   const handleOpenArticle = name => {
@@ -48,10 +39,6 @@ const IndexPage = ({ location }) => {
 
   useEffect(() => {
     setTimeout(() => setLoading(''), 250);
-    document.addEventListener('mousedown', handleClickOutside);
-
-    // eslint-disable-next-line no-unused-expressions
-    () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   return (
@@ -69,7 +56,6 @@ const IndexPage = ({ location }) => {
             articleTimeout={articleTimeout}
             article={article}
             onCloseArticle={handleCloseArticle}
-            setWrapperRef={setWrapperRef}
           />
           <Footer timeout={timer} />
         </div>
