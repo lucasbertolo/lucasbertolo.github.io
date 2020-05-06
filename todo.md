@@ -1,15 +1,55 @@
-## list
+## New Features
 
-> General
+<General>
 
-- Error page
-- Refactoring logic
-- Refactoring style
-- Componentize 
-- Testing 
-- language
-- loading spinner
-- script url
-- controlled form
-- auth gmail
-- click outside
+- Add another language context
+- Spinner
+
+<About>
+
+- Improvement content
+- Remove photo?
+- Remove history
+- Focus on skills
+- Add resume on this page
+
+<Jobs>
+
+- Update content
+- Add info section
+- Post gifs 
+
+<History>
+
+- Create a flappy bird's style game to show your history
+
+<Main>
+
+- Change Icon
+
+<ErrorPage>
+
+- Add Custom Error/NotFound page
+
+<ErrorBoundary>
+
+- Add Error boundary
+
+## Bugs
+
+<General>
+
+- Change logo
+
+## Improvements
+
+- SCSS style
+- Check perfomance in profiler
+
+
+## Coding 
+
+<Contact>
+    - Add env to github
+
+
