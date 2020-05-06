@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: "Lucas Bertolo - Portfolio",
-    author: "Lucas Bertolo",
-    description: "Portfolio de desenvolvedor web",
-    siteUrl: "https://lucasbertolo.github.io/"
+    title: 'Lucas Bertolo - Portfolio',
+    author: 'Lucas Bertolo',
+    description: 'Portfolio de desenvolvedor web',
+    siteUrl: 'https://lucasbertolo.github.io/',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -21,6 +21,6 @@ module.exports = {
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
-    'gatsby-plugin-sitemap'
+    'gatsby-plugin-sitemap',
   ],
-}
+};

@@ -5,6 +5,7 @@
   "homepage": "https://lucasbertolo.github.io",
   "author": "Lucas Bertolo",
   "dependencies": {
+    "@hot-loader/react-dom": "^16.13.0",
     "emailjs-com": "^2.4.1",
     "gatsby": "^2.21.1",
     "gatsby-plugin-manifest": "^2.4.1",

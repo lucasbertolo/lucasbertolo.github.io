@@ -1,6 +1,3 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
-/* eslint-disable no-script-url */
-
 import React from 'react';
 
 const Header = ({ onOpenArticle, timeout }) => (
@@ -17,44 +14,44 @@ const Header = ({ onOpenArticle, timeout }) => (
     <nav>
       <ul>
         <li>
-          <a
-            href="javascript:;"
+          <span
+            role="presentation"
             onClick={() => {
               onOpenArticle('intro');
             }}
           >
             Currículo
-          </a>
+          </span>
         </li>
         <li>
-          <a
-            href="javascript:;"
+          <span
+            role="presentation"
             onClick={() => {
               onOpenArticle('work');
             }}
           >
             Portfolio
-          </a>
+          </span>
         </li>
         <li>
-          <a
-            href="javascript:;"
+          <span
+            role="presentation"
             onClick={() => {
               onOpenArticle('about');
             }}
           >
             Sobre
-          </a>
+          </span>
         </li>
         <li>
-          <a
-            href="javascript:;"
+          <span
+            role="presentation"
             onClick={() => {
               onOpenArticle('contact');
             }}
           >
             Contato
-          </a>
+          </span>
         </li>
       </ul>
     </nav>
