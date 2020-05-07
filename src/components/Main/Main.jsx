@@ -48,7 +48,7 @@ class Main extends React.PureComponent {
           }`}
           style={{ display: 'none' }}
         >
-          <Work close={close} />
+          <Work close={onCloseArticle} />
         </article>
 
         <article

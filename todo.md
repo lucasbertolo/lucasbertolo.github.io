@@ -18,6 +18,8 @@
 - Update content
 - Add info section
 - Post gifs 
+- Pagination
+- Update style cover
 
 <History>
 
@@ -40,6 +42,8 @@
 <General>
 
 - Change logo
+- Readme
+- ChangeLog
 
 ## Improvements
 
@@ -52,4 +56,5 @@
 <Contact>
     - Add env to github
 
+- Componentize
 

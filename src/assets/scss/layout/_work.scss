@@ -1,0 +1,81 @@
+$row-size: 200px;
+$row-width: 250px; 
+
+.back{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 20px;
+    cursor: pointer;
+
+    &:hover {
+        &:before {
+            color: _palette(fg-light);
+        }
+    }
+}
+.container-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax($row-width, 2fr));
+    grid-auto-rows: $row-size;
+    grid-gap: 20px;
+
+    a {
+        border: none;
+    }
+
+    .zone {
+        font-size: 1em;
+        transition: all 0.3s linear;
+        display: flex;
+        justify-content: center;
+        background-color: red;
+        font-size: 1em;
+        position: relative;
+        -webkit-box-shadow: rgba(15, 13, 13, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+        -moz-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+        -o-box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+        box-shadow: rgba(0, 0, 0, 0.8) 0px 5px 15px, inset rgba(0, 0, 0, 0.15) 0px -10px 20px;
+        cursor: pointer;
+
+        .project-image {
+            width: 100%;
+            height: $row-size;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .cover {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            visibility: hidden;
+            background-color: rgba(104, 151, 155, 0.8);
+
+            p {
+                color: white;
+                margin: auto;
+                text-transform: uppercase;
+                letter-spacing: _font(letter-spacing);
+                font-size: 1em;
+                line-height: 2;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+
+        &:hover {
+            .cover {
+                visibility: visible;
+            }
+        }
+    }
+}
+
+.modal-info {
+    a {
+        border: none;
+    }
+}
