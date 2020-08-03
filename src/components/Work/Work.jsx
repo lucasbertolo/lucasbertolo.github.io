@@ -14,8 +14,8 @@ const Work = ({ close }) => {
 
   const handleSelect = item => {
     try {
-      const project = projects.filter(p => p.name === item);
-      setSelectedProject(project[0]);
+      const project = projects.find(p => p.name === item);
+      setSelectedProject(project);
       changeDisplay(true);
     } catch (err) {
       clearItems();
@@ -33,26 +33,29 @@ const Work = ({ close }) => {
 
   return (
     <>
-      <h2 className="major">Portfolio</h2>
       {displayInfo ? (
         <>
-          <span
-            className="icon fa-chevron-left back"
+          <ModalInfo project={selectedProject} />
+          <div
+            className="goback"
             onClick={goBack}
+            onKeyPress={goBack}
             role="presentation"
           />
-          <ModalInfo project={selectedProject} />
         </>
       ) : (
-        <ListProjects handleSelect={handleSelect} />
-      )}
+        <>
+          <h2 className="major">Portfolio</h2>
 
-      <div
-        className="close"
-        onClick={handleClose}
-        onKeyPress={handleClose}
-        role="presentation"
-      />
+          <ListProjects handleSelect={handleSelect} />
+          <div
+            className="close"
+            onClick={handleClose}
+            onKeyPress={handleClose}
+            role="presentation"
+          />
+        </>
+      )}
     </>
   );
 };

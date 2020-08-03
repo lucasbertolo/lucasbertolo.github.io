@@ -1,17 +1,16 @@
 import React from 'react';
+import { InfoTools } from './InfoTools';
+import { InfoImage } from './InfoImage';
+import { InfoAction } from './InfoAction';
+import { InfoDescription } from './InfoDescription';
 
 export const ModalInfo = ({ project }) => {
   return (
     <div className="modal-info">
-      <h3>Projeto: {project.name}</h3>
-
-      <h3>Descrição: {project.description}</h3>
-
-      <h3>Ferramentas utilizadas: {project.tools} </h3>
-
-      <a href={project.link} target="_blank" rel="noopener noreferrer">
-        <button type="button">Ir para o site</button>
-      </a>
+      <InfoImage />
+      <InfoDescription name={project.name} description={project.description} />
+      <InfoTools tools={project.tools || []} />
+      <InfoAction link={project.link} />
     </div>
   );
 };

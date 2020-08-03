@@ -4,6 +4,7 @@
 
 - Add another language context
 - Spinner
+- Fix package json attr
 
 <About>
 
@@ -16,10 +17,10 @@
 <Jobs>
 
 - Update content
-- Add info section
 - Post gifs 
 - Pagination
 - Update style cover
+- Update style infomodal
 
 <History>
 

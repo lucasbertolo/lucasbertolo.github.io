@@ -1,0 +1,21 @@
+export default {
+  tools: {
+    react: 'react',
+    node: 'node',
+    next: 'next.js',
+    native: 'react-native',
+    gatsby: 'gatsby',
+    graphql: 'graphql',
+    realm: 'realm',
+    mysql: 'mysql',
+    postgres: 'postgres',
+    javascript: 'javascript',
+    sass: 'sass',
+    html5: 'html5',
+    dotnet: 'dotnet',
+    sql: 'sql',
+    git: 'git',
+    csharp: 'c#',
+    linq: 'linq',
+  },
+};

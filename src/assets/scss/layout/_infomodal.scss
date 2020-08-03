@@ -1,0 +1,26 @@
+$margin-modal: 15px;
+
+.modal-info { 
+    .info-image {
+        width: 100%;
+        height: 275px;
+        margin: $margin-modal auto;
+        figure, img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .info-tools {
+        margin-bottom: $margin-modal;
+    }
+
+    .info-action{
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+            border: none;
+        }
+    }
+}
