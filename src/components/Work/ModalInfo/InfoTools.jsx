@@ -7,8 +7,8 @@ export const InfoTools = ({ tools }) =>
         <h4>Ferramentas:</h4>
         <div className="chip-group">
           {tools.map(tool => (
-            <div className="chip" key={tool}>
-              <span>{tool}</span>
+            <div className={`chip ${tool.replace('.', '')}`} key={tool}>
+              <span className="tag">{tool}</span>
             </div>
           ))}
         </div>

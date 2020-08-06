@@ -35,7 +35,7 @@
 
 .chip:hover,
 .chip:focus {
-    background-color: #e3e2e2;
+    opacity: 0.5;
 }
 
 .chip:active:focus {
@@ -46,7 +46,7 @@
     border: none;
     margin-top: 0;
     margin-bottom: 0;
-    padding: 0;
+    padding: 5px;
     background: none;
     display: inline-flex;
 }
@@ -55,10 +55,10 @@
     transition: all 0.3s ease-in-out;
     background-color: #fff;
     border-radius: 30px;
-    border: 1px solid #d3d2d2;
+    // border: 1px solid #e7d6d6;
     display: inline-flex;
     align-items: center;
-    padding: 4px 6px 4px 6px;
+    padding: 10px 12px 10px 12px;
     margin-right: 6px;
     margin-bottom: 6px;
 }

@@ -6,52 +6,109 @@
 
 /* Icon */
 
-	.icon {
-		@include icon;
-		border-bottom: none;
-		position: relative;
+.icon {
+    @include icon;
+    border-bottom: none;
+    position: relative;
 
-		> .label {
-			display: none;
-		}
-	}
+    >.label {
+        display: none;
+    }
+}
 
-	.social-link{
-		border: none;
-	}
+.social-link {
+    border: none;
+}
 
-	.social {
-		padding: 10px;
-		cursor: pointer;
-		font-size: 1.6em;
-	}
+.social {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.6em;
+}
 
-	.fa-github{
-		&:hover{
-			color: #824D86;
-		}
-	}
+.fa-github {
+    &:hover {
+        color: #824D86;
+    }
+}
 
-	.fa-instagram{
-		&:hover{
-			color: #dc4a38;
-		}
-	}
+.fa-instagram {
+    &:hover {
+        color: #dc4a38;
+    }
+}
 
-	.fa-facebook{
-		&:hover{
-			color: #3b5998;
-		}
-	}
+.fa-facebook {
+    &:hover {
+        color: #3b5998;
+    }
+}
 
-	.fa-linkedin{
-		&:hover{
-			color: #A6E6E6;
-		}
-	}
+.fa-linkedin {
+    &:hover {
+        color: #A6E6E6;
+    }
+}
 
-	.fa-whatsapp{
-		&:hover{
-			color: #329457;
-		}
-	}
+.fa-whatsapp {
+    &:hover {
+        color: #329457;
+    }
+}
+
+// TAGS
+
+.tag {
+    font-family: _font(family-fixed);
+    text-transform: uppercase;
+}
+
+.node {
+    background-color:  #339933;
+
+    *:first-child {
+        color: #fff;
+    }
+
+}
+
+.react {
+    background-color: #61DBFB;
+
+    *:first-child {
+        color: #000;
+    }
+}
+
+.nextjs {
+    background-color: #fff;
+
+    *:first-child {
+        color: #000;
+    }
+}
+
+.javascript {
+    background-color: #f0db4f;
+
+    *:first-child {
+        color: #323330;
+    }
+}
+
+.sass {
+    background-color: #cc6699;
+
+    *:first-child {
+        color: #fff;
+    }
+}
+
+.html5 {
+    background-color: #e44d26;
+
+    *:first-child {
+        color: #fff;
+    }
+}
+
