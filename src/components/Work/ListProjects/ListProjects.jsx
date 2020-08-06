@@ -2,7 +2,7 @@ import React from 'react';
 import projects from '../../../assets/sources';
 
 export const ListProjects = ({ handleSelect }) => (
-  <div className="container-portfolio">
+  <div className="container-portfolio fadeIn">
     {projects.map(project => (
       <nav
         className="zone"

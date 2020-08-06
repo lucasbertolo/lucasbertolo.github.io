@@ -10,9 +10,9 @@ const projects = [
     image:
       'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/lms_By54PI7w4.png',
     tools: [react, next, javascript, sass, html5],
+    github: 'https://github.com/lucasbertolo/lais-salvador',
   },
 
-  // https://ik.imagekit.io/demo/tr:w-200/medium_cafe_B1iTdD0C.jpg
   {
     name: 'cage',
     link: 'https://lucasbertolo.github.io/cage-the-elephant/',

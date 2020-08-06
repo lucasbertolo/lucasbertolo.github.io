@@ -5,6 +5,7 @@
 - Add another language context
 - Spinner
 - Fix package json attr
+- Tags
 
 <About>
 
@@ -20,11 +21,10 @@
 - Post gifs 
 - Pagination
 - Update style cover
-- Update style infomodal
 
 <History>
 
-- Create a flappy bird's style game to show your history
+- Create a dinosaur's style game to show your history
 
 <Main>
 
@@ -50,7 +50,6 @@
 
 - SCSS style
 - Check perfomance in profiler
-
 
 ## Coding 
 

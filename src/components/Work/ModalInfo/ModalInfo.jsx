@@ -6,11 +6,11 @@ import { InfoDescription } from './InfoDescription';
 
 export const ModalInfo = ({ project }) => {
   return (
-    <div className="modal-info">
+    <div className="modal-info fadeIn">
       <InfoImage />
       <InfoDescription name={project.name} description={project.description} />
       <InfoTools tools={project.tools || []} />
-      <InfoAction link={project.link} />
+      <InfoAction link={project.link} github={project.github} />
     </div>
   );
 };

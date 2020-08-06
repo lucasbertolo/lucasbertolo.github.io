@@ -1,11 +1,15 @@
 $margin-modal: 15px;
 
-.modal-info { 
+
+.modal-info {
+
     .info-image {
         width: 100%;
         height: 275px;
         margin: $margin-modal auto;
-        figure, img {
+
+        figure,
+        img {
             height: 100%;
             width: 100%;
         }
@@ -15,11 +19,12 @@ $margin-modal: 15px;
         margin-bottom: $margin-modal;
     }
 
-    .info-action{
+    .info-action {
         display: flex;
         justify-content: flex-end;
 
         a {
+            padding: 10px;
             border: none;
         }
     }
