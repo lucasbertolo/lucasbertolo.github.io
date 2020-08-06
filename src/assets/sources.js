@@ -1,7 +1,3 @@
-import enums from '../core/enums';
-
-const { react, next, javascript, sass, html5 } = enums.tools;
-
 const projects = [
   {
     name: 'LMS Arquitetura',
@@ -9,7 +5,7 @@ const projects = [
     link: 'https://lms-arquitetura.com',
     image:
       'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/lms_By54PI7w4.png',
-    tools: [react, next, javascript, sass, html5],
+    tools: ['react', 'next', 'javascript', 'sass', 'html5'],
     github: 'https://github.com/lucasbertolo/lais-salvador',
   },
 

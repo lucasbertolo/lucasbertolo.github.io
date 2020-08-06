@@ -64,7 +64,7 @@
 }
 
 .node {
-    background-color:  #339933;
+    background-color: #339933;
 
     *:first-child {
         color: #fff;
@@ -72,7 +72,7 @@
 
 }
 
-.react {
+.react, .native {
     background-color: #61DBFB;
 
     *:first-child {
@@ -111,4 +111,21 @@
         color: #fff;
     }
 }
+
+.sql {
+    background-color: #df831b;
+
+    *:first-child {
+        color: #fff;
+    }
+}
+
+.csharp{
+    background-color: #ac13a4;
+
+    *:first-child {
+        color: #fff;
+    }
+}
+
 

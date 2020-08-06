@@ -8,7 +8,7 @@ const Header = ({ onOpenArticle, timeout }) => (
     <div className="content">
       <div className="inner">
         <h1>Lucas Bertolo</h1>
-        <p>Desenvolvedor Web</p>
+        <p>Desenvolvedor de Sistemas</p>
       </div>
     </div>
     <nav>

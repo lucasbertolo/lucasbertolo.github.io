@@ -1,0 +1,33 @@
+.about-modal {
+    #skillchart table {
+        margin: 0 auto 0 auto;
+        width: 100%;
+        font-family: _font(family-fixed);
+    }
+
+    #skillchart table td:nth-child(odd) {
+        width: 25%;
+    }
+
+    p {
+        text-align: justify;
+        font-family: _font(family-fixed);
+    }
+
+    .xpbar {
+        p {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        color: white;
+        font-size: 12px;
+        display: inline-block;
+        height: 20px;
+        box-shadow: 0 1px 3px black;
+        border-radius: 3px;
+        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+    }
+
+
+}
