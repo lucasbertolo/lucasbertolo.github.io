@@ -5,14 +5,13 @@
 - Add another language context
 - Spinner
 - Fix package json attr
+- Acessibility
 - Tags
+- Add env to github
 
 <About>
 
 - Improvement content
-- Remove photo?
-- Remove history
-- Focus on skills
 - Add resume on this page
 
 <Jobs>
@@ -21,10 +20,13 @@
 - Post gifs 
 - Pagination
 - Update style cover
+- Lighthouse score
 
 <History>
 
 - Create a dinosaur's style game to show your history
+- Add full history button
+- Add timeline like remax's visit
 
 <Main>
 
@@ -51,10 +53,5 @@
 - SCSS style
 - Check perfomance in profiler
 
-## Coding 
 
-<Contact>
-    - Add env to github
-
-- Componentize
 

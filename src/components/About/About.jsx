@@ -1,16 +1,16 @@
 import React from 'react';
-import { History } from './History';
+import { WrapperResume } from './WrapperResume';
 import { Skills } from './Skills';
 
-const About = ({ close }) => (
-  <div className="about-modal">
-    <h2 className="major">Sobre</h2>
-
-    <Skills />
-    <History />
-
-    {close}
-  </div>
-);
+const About = ({ close }) => {
+  return (
+    <div className="about-modal">
+      <h2 className="major">Sobre</h2>
+      <Skills />
+      <WrapperResume />
+      {close}
+    </div>
+  );
+};
 
 export default About;
