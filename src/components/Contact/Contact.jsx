@@ -1,10 +1,13 @@
-import React, { useReducer } from 'react';
 import emailjs from 'emailjs-com';
-import { Fields } from './Fields/Fields';
-import { Actions } from './Actions/Actions';
-import { Social } from './Social/Social';
+import React, { useContext, useReducer } from 'react';
+import { CultureContext } from '../../core/resources';
+import { Actions } from './Actions';
+import { Fields } from './Fields';
+import { Social } from './Social';
 
 const Contact = ({ close }) => {
+  const { l } = useContext(CultureContext);
+
   const INITIAL_STATE = {
     name: '',
     message: '',
@@ -45,20 +48,20 @@ const Contact = ({ close }) => {
       .send('gmail', templateId, variables, process.env.USER_ID)
       .then(res => {
         if (res.status === 200) {
-          setStatus('Email enviado com sucesso');
+          setStatus(l('sentEmail'));
           clearValues();
-        } else setStatus('Erro no envio, tente novamente mais tarde');
+        } else setStatus(l('tryAgain'));
       })
-      .catch(() => setStatus('Erro no envio, tente novamente mais tarde'));
+      .catch(() => setStatus(l('tryAgain')));
   };
 
   const handleSubmit = () => {
     if (email.length === 0 || name.length === 0 || message.length === 0) {
-      setStatus('Campo(s) vazio');
+      setStatus(l('emptyFields'));
       return;
     }
 
-    setStatus('Enviando...');
+    setStatus(l('sending'));
     const templateId = 'template_D0l322F4';
 
     sendFeedback(templateId, {
@@ -70,7 +73,7 @@ const Contact = ({ close }) => {
 
   return (
     <section>
-      <h2 className="major">Contato</h2>
+      <h2 className="major">{l('contact')}</h2>
       <div className="form">
         <Fields
           setValues={setValues}

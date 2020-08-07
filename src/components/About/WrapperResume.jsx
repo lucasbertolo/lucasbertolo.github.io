@@ -1,8 +1,11 @@
-import React, { Suspense, lazy, useState } from 'react';
+import React, { Suspense, lazy, useState, useContext } from 'react';
+import { CultureContext } from '../../core/resources';
 
 const Resume = lazy(() => import('./Resume'));
 
 export const WrapperResume = () => {
+  const { l } = useContext(CultureContext);
+
   const [showResume, setShowResume] = useState(false);
   const [fade, setFade] = useState(false);
 
@@ -14,7 +17,7 @@ export const WrapperResume = () => {
   return (
     <>
       <button type="button" onClick={handleResume} style={{ marginBottom: 30 }}>
-        {showResume ? 'Ocultar curriculo' : 'Ver curriculo'}
+        {showResume ? l('hideResume') : l('showResume')}
       </button>
       {showResume && (
         <Suspense fallback={<div className="spinner">Carregando...</div>}>

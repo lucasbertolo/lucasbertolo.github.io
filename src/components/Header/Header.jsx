@@ -1,6 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CultureContext } from '../../core/resources';
+
+const tabs = ['intro', 'work', 'about', 'contact'];
 
 const Header = ({ onOpenArticle, timeout }) => {
+  const { l } = useContext(CultureContext);
+
   const handleArticles = id => () => {
     onOpenArticle(id);
   };
@@ -8,20 +13,20 @@ const Header = ({ onOpenArticle, timeout }) => {
   return (
     <header id="header" style={timeout ? { display: 'none' } : {}}>
       <div className="logo">
-        <span className="icon fa-bolt" />
+        <span className="icon fa-leaf" />
       </div>
       <div className="content">
         <div className="inner">
           <h1>Lucas Bertolo</h1>
-          <p>Desenvolvedor de Sistemas</p>
+          <p>{l('webDev')}</p>
         </div>
       </div>
       <nav>
         <ul>
           {tabs.map(tab => (
-            <li key={tab.id}>
-              <span role="presentation" onClick={handleArticles(tab.id)}>
-                {tab.label}
+            <li key={tab}>
+              <span role="presentation" onClick={handleArticles(tab)}>
+                {l(tab)}
               </span>
             </li>
           ))}
@@ -32,22 +37,3 @@ const Header = ({ onOpenArticle, timeout }) => {
 };
 
 export default Header;
-
-const tabs = [
-  {
-    id: 'intro',
-    label: ' Currículo',
-  },
-  {
-    id: 'work',
-    label: 'Portfolio',
-  },
-  {
-    id: 'about',
-    label: 'Sobre',
-  },
-  {
-    id: 'contact',
-    label: ' Contato',
-  },
-];

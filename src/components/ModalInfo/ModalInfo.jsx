@@ -1,0 +1,22 @@
+import React, { useContext } from 'react';
+import { CultureContext } from '../../core/resources';
+import { InfoAction } from './InfoAction';
+import { InfoDescription } from './InfoDescription';
+import { InfoImage } from './InfoImage';
+import { InfoTools } from './InfoTools';
+
+export const ModalInfo = ({ project }) => {
+  const { culture } = useContext(CultureContext);
+
+  return (
+    <div className="modal-info fadeIn">
+      <InfoImage />
+      <InfoDescription
+        name={project.name}
+        description={project.description ? project.description[culture] : ''}
+      />
+      <InfoTools tools={project.tools} />
+      <InfoAction link={project.link} github={project.github} />
+    </div>
+  );
+};

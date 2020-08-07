@@ -1,5 +1,5 @@
 import React from 'react';
-import pdf from '../../assets/resumo.pdf';
+import pdf from '../../assets/files/resumo.pdf';
 
 const Resume = ({ fade }) => (
   <embed

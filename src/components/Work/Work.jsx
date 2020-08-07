@@ -1,9 +1,12 @@
-import React, { useState } from 'react';
-import { ListProjects } from './ListProjects/ListProjects';
-import { ModalInfo } from './ModalInfo/ModalInfo';
+import React, { useContext, useState } from 'react';
 import projects from '../../assets/sources';
+import { CultureContext } from '../../core/resources';
+import { ModalInfo } from '../ModalInfo/ModalInfo';
+import { ListProjects } from './ListProjects';
 
 const Work = ({ close }) => {
+  const { l } = useContext(CultureContext);
+
   const [displayInfo, changeDisplay] = useState(false);
   const [selectedProject, setSelectedProject] = useState({});
 
@@ -45,7 +48,7 @@ const Work = ({ close }) => {
         </>
       ) : (
         <>
-          <h2 className="major">Portfolio</h2>
+          <h2 className="major">{l('work')}</h2>
 
           <ListProjects handleSelect={handleSelect} />
           <div

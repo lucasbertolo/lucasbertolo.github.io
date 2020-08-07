@@ -1,0 +1,22 @@
+.culture-section {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+    right: 0;
+    height: 40px;
+    width: 100px;
+    z-index: 5;
+    cursor: pointer;
+
+    img {
+        opacity: 0.5;
+        height: 25px;
+        width: 25px;
+    }
+
+    .isSelected {
+        opacity: 1
+    }
+
+}
