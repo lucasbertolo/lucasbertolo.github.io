@@ -7,6 +7,7 @@ import dinosaurLeft from '../../../assets/files/dinosaur_left.png';
 import dinosaurRight from '../../../assets/files/dinosaur_right.png';
 import dinosaurDie from '../../../assets/files/dinosaur_die.png';
 import obstacle from '../../../assets/files/obstacle.png';
+import reward from '../../../assets/files/door.png';
 
 const STATUS = {
   STOP: 'STOP',
@@ -37,6 +38,7 @@ export default class Game extends React.Component {
     const playerRightImage = new Image();
     const playerDieImage = new Image();
     const obstacleImage = new Image();
+    const rewardImage = new Image();
 
     skyImage.onload = onImageLoaded;
     groundImage.onload = onImageLoaded;
@@ -49,6 +51,7 @@ export default class Game extends React.Component {
     playerRightImage.src = dinosaurRight;
     playerDieImage.src = dinosaurDie;
     obstacleImage.src = obstacle;
+    rewardImage.src = reward;
 
     const { options } = this.props;
     this.options = {
@@ -64,6 +67,7 @@ export default class Game extends React.Component {
         playerDieImage,
       ],
       obstacleImage,
+      rewardImage,
       skyOffset: 0,
       groundOffset: 0,
       ...options,
@@ -78,6 +82,7 @@ export default class Game extends React.Component {
     this.jumpHeight = 0;
     this.jumpDelta = 0;
     this.obstaclesBase = 1;
+    this.rewardsBase = 1;
     this.obstacles = this.obstaclesGenerate();
     this.currentDistance = 0;
     this.playerStatus = 0;
@@ -173,6 +178,7 @@ export default class Game extends React.Component {
     this.currentDistance = 0;
     this.obstacles = [];
     this.obstaclesBase = 1;
+    this.rewardsBase = 1;
     this.playerStatus = 0;
   }
 
@@ -191,24 +197,11 @@ export default class Game extends React.Component {
       random = ((Math.random() * 10) % 2 === 0 ? 1 : -1) * random;
       res.push({
         distance: random + this.obstaclesBase * 200,
+        isReward: i === 3,
       });
       ++this.obstaclesBase;
     }
-    return res;
-  }
 
-  rewardsGenerate() {
-    // TODO - create logic for history
-    const res = [];
-    for (let i = 0; i < 10; ++i) {
-      let random = Math.floor(Math.random() * 100) % 60;
-      // eslint-disable-next-line operator-assignment
-      random = ((Math.random() * 10) % 2 === 0 ? 1 : -1) * random;
-      res.push({
-        distance: random + this.obstaclesBase * 200,
-      });
-      ++this.obstaclesBase;
-    }
     return res;
   }
 
@@ -218,11 +211,15 @@ export default class Game extends React.Component {
     }
 
     const { options } = this;
+    const { handleLevel, resetLevel } = this.props;
 
     const level = Math.min(200, Math.floor(this.score / 100));
     const groundSpeed = (options.groundSpeed + level) / options.fps;
     const skySpeed = options.skySpeed / options.fps;
+
     const obstacleWidth = options.obstacleImage.width;
+    const rewardsWidth = options.rewardImage.width;
+
     const playerWidth = options.playerImage[0].width;
     const playerHeight = options.playerImage[0].height;
 
@@ -299,7 +296,9 @@ export default class Game extends React.Component {
         const offset =
           width -
           (this.currentDistance - this.obstacles[i].distance + groundSpeed);
-        if (offset > 0) {
+        if (offset > 0 && this.obstacles[i].isReward) {
+          ctx.drawImage(options.rewardImage, offset, 0);
+        } else if (offset > 0) {
           ctx.drawImage(options.obstacleImage, offset, 84);
         } else {
           ++pop;
@@ -317,11 +316,21 @@ export default class Game extends React.Component {
 
     const firstOffset =
       width - (this.currentDistance - this.obstacles[0].distance + groundSpeed);
+
     if (
+      this.obstacles[0].isReward &&
+      90 - rewardsWidth < firstOffset &&
+      firstOffset < 60 + playerWidth
+    ) {
+      this.pause();
+      handleLevel();
+      setTimeout(() => this.goOn(), 0);
+    } else if (
       90 - obstacleWidth < firstOffset &&
       firstOffset < 60 + playerWidth &&
       64 - this.jumpHeight + playerHeight > 84
     ) {
+      resetLevel();
       this.stop();
     }
 
@@ -336,7 +345,7 @@ export default class Game extends React.Component {
         ref={ref => {
           this.canvas = ref;
         }}
-        height={350}
+        height={150}
         width={500}
       />
     );

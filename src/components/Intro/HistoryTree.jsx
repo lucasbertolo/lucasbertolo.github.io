@@ -1,5 +1,7 @@
 import React from 'react';
 
+import vivo from '../../assets/files/vivo-logo.png';
+
 const tree = [
   {
     year: 2010,
@@ -52,14 +54,16 @@ const tree = [
   },
 ];
 
-export default function HistoryTree() {
+export default function HistoryTree({ allowedHistory }) {
   const entries = tree.sort((a, b) => a.year - b.year);
+
+  const filteredEntries = entries.slice(0, allowedHistory);
 
   return (
     <div className="schedule-container">
       <ul className="main">
         <h3 className="lbl-title">Historico</h3>
-        {entries.map(item => {
+        {filteredEntries.map(item => {
           return (
             <div key={item.local}>
               <li className="date">
@@ -68,8 +72,11 @@ export default function HistoryTree() {
               <li className="events">
                 <ul className="events-detail">
                   {item.jobs.map(job => (
-                    <li key={job.local}>
+                    <li key={job.local} className="fadeIn">
                       <div className="event-info">
+                        <figure className="event-logo">
+                          <img src={vivo} alt="vivo-logo" />
+                        </figure>
                         <span className="event-time">{job.local} - </span>
                         <span className="event-name">
                           <span className="lbl-name"> {job.function} </span>

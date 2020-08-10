@@ -10,6 +10,10 @@
 - put animate on changing language
 - Tests
 - Resort folders
+- change images folder to inside assets
+- move const to sources
+- colour pallete
+- shareable page
 
 <Jobs>
 
@@ -18,12 +22,14 @@
 - Pagination
 - Update style cover
 - Lighthouse score
+- lazy load images
 
 <History>
 
-- Create a dinosaur's style game to show your history
 - Add full history button
-- Add timeline like remax's visit
+- change modal name
+- check game's logic to every scenario
+
 
 <ErrorPage>
 
