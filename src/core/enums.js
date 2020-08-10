@@ -17,5 +17,7 @@ export default {
     git: 'Git',
     csharp: 'C#',
     linq: 'Linq',
+    aws: 'AWS',
+    pwa: 'PWA',
   },
 };

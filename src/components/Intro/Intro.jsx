@@ -1,12 +1,14 @@
 import React from 'react';
-import pdf from '../../assets/files/resumo.pdf';
+import Game from './Game/Game';
+import HistoryTree from './HistoryTree';
 
-const Intro = ({ close }) => (
-  <div>
-    <h2 className="major">Resumo</h2>
-    <embed src={pdf} type="application/pdf" />
-    {close}
-  </div>
-);
+const Intro = () => {
+  return (
+    <div className="intro-modal">
+      {/* <Game /> */}
+      <HistoryTree />
+    </div>
+  );
+};
 
 export default Intro;

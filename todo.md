@@ -8,6 +8,8 @@
 - Tags
 - Add env to github
 - put animate on changing language
+- Tests
+- Resort folders
 
 <Jobs>
 
