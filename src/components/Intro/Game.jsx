@@ -125,6 +125,12 @@ export default class Game extends React.Component {
     window.onfocus = this.goOn;
   }
 
+  componentDidUpdate() {
+    const { isOver } = this.props;
+
+    if (isOver) this.stop();
+  }
+
   setTimer() {
     this.timer = setInterval(() => this.draw(), 1000 / this.options.fps);
   }
@@ -215,7 +221,7 @@ export default class Game extends React.Component {
     }
 
     const { options } = this;
-    const { handleLevel } = this.props;
+    const { handleLevel, currentLevel, resetLevel } = this.props;
 
     const level = Math.min(200, Math.floor(this.score / 100));
     const groundSpeed = (options.groundSpeed + level) / options.fps;
@@ -273,7 +279,7 @@ export default class Game extends React.Component {
 
     ctx.font = 'Bold 18px Arial';
     ctx.textAlign = 'right';
-    ctx.fillStyle = '#595959';
+    ctx.fillStyle = 'rgba(255,255,255,0.5)';
 
     if (this.status === STATUS.START) {
       this.score += 0.5;
@@ -288,8 +294,10 @@ export default class Game extends React.Component {
     }
     if (this.highScore) {
       ctx.textAlign = 'left';
-      ctx.fillText(`HIGH  ${Math.floor(this.highScore)}`, 30, 23);
+      ctx.fillText(`SCORE: ${Math.floor(this.highScore)}`, 30, 13);
     }
+    ctx.textAlign = 'right';
+    ctx.fillText(`LEVEL: ${currentLevel}`, this.canvas.width - 20, 13);
 
     let pop = 0;
     for (let i = 0; i < this.obstacles.length; ++i) {
@@ -331,6 +339,7 @@ export default class Game extends React.Component {
       firstOffset < 60 + playerWidth &&
       64 - this.jumpHeight + playerHeight > 84
     ) {
+      resetLevel();
       this.stop();
     }
 
@@ -339,15 +348,17 @@ export default class Game extends React.Component {
 
   render() {
     return (
-      <canvas
-        style={{ width: '100%', padding: 0 }}
-        id="canvas"
-        ref={ref => {
-          this.canvas = ref;
-        }}
-        height={150}
-        width={500}
-      />
+      <section className="game">
+        <canvas
+          style={{ width: '100%', padding: 0 }}
+          id="canvas"
+          ref={ref => {
+            this.canvas = ref;
+          }}
+          height={200}
+          width={500}
+        />
+      </section>
     );
   }
 }

@@ -1,10 +1,13 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useContext } from 'react';
 import { CultureContext } from '../../core/resources';
-import { historyTree } from '../../core/sources';
 import * as icons from './Icons';
 
-export default function HistoryTree({ allowedHistory }) {
+export default function HistoryTree({
+  historyTree,
+  allowedHistory,
+  isOpening,
+}) {
   const { l, culture } = useContext(CultureContext);
 
   const entries = historyTree.sort((a, b) => a.year - b.year);
@@ -31,7 +34,7 @@ export default function HistoryTree({ allowedHistory }) {
     }
   };
   return (
-    <div className="schedule-container">
+    <div className={`${isOpening ? 'expand' : ''} schedule-container`}>
       <ul className="main">
         <h3 className="lbl-title">Historico</h3>
         {filteredEntries.map((item, idx) => {
