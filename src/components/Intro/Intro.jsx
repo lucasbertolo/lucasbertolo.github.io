@@ -3,28 +3,28 @@ import { CultureContext } from '../../core/resources';
 import { historyTree } from '../../core/sources';
 import Game from './Game';
 import HistoryTree from './HistoryTree';
+import { Trophy } from './Trophy';
 
 const STATUS = {
   CLOSED: 'CLOSED',
   DOUBT: 'DOUBT',
   OPEN: 'OPEN',
 };
+
 const Intro = ({ close }) => {
   const { l } = useContext(CultureContext);
 
   const LAST_LEVEL = historyTree.length;
+  let time = null;
+
   const [allowedHistory, setAllowedHistory] = useState(
     window.localStorage?.currentLevel || 0,
   );
   const [currentLevel, setCurrentLevel] = useState(0);
   const [gameOver, setGameOver] = useState(false);
   const [buttonState, setButtonState] = useState(STATUS.CLOSED);
+  const [showTrophy, setShowTrophy] = useState(false);
 
-  // TODO - FAZER LOGICA DO FINAL DO JOGO - APARECER NA TELA JOGO COMPLETO
-  // TODO - ANIMAÇÂO PARA CASO O USER VENÇA
-  // TODO - DESCRIÇÂO DOS EMPREGOS
-
-  let time = null;
   const debouncing = (action, timeOut) => {
     clearTimeout(time);
     time = setTimeout(() => {
@@ -46,7 +46,10 @@ const Intro = ({ close }) => {
         window.localStorage.currentLevel = result;
       }
 
-      if (result === LAST_LEVEL) setGameOver(true);
+      if (result === LAST_LEVEL) {
+        setGameOver(true);
+        setTimeout(() => setShowTrophy(true), 5000);
+      }
     }, 500);
   };
 
@@ -60,17 +63,24 @@ const Intro = ({ close }) => {
     }, 100);
   };
 
+  const checkButton =
+    buttonState === STATUS.OPEN || allowedHistory === LAST_LEVEL;
+
   return (
     <div className="intro-modal">
       {close}
-      {buttonState !== STATUS.OPEN && (
-        <Game
-          handleLevel={handleLevel}
-          resetLevel={resetLevel}
-          isOver={gameOver}
-          currentLevel={currentLevel}
-        />
-      )}
+      {buttonState !== STATUS.OPEN &&
+        (showTrophy ? (
+          <Trophy />
+        ) : (
+          <Game
+            handleLevel={handleLevel}
+            resetLevel={resetLevel}
+            isOver={gameOver}
+            currentLevel={currentLevel}
+            totalLevel={LAST_LEVEL}
+          />
+        ))}
       {allowedHistory > 0 && (
         <HistoryTree
           historyTree={historyTree}
@@ -78,7 +88,7 @@ const Intro = ({ close }) => {
           isOpening={buttonState === STATUS.OPEN}
         />
       )}
-      {buttonState !== STATUS.OPEN && (
+      {!checkButton && (
         <span className="full-history">
           <button
             className={buttonState === STATUS.DOUBT ? 'bounce' : ''}

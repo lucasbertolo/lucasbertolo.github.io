@@ -28,12 +28,11 @@
 - change modal name
 - check game's logic to every scenario
 - Add description in job
-- Add close button
-- Save in localstorage allowed level
 - lazy load images history and game
 - Message before game
-- Message after game
-- Add full history button
+- Message after game - trophy get smaller after while
+- restart view after close
+- effect trophy minimize
 
 <ErrorPage>
 

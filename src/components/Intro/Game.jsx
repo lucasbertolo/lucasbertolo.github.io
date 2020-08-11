@@ -128,7 +128,10 @@ export default class Game extends React.Component {
   componentDidUpdate() {
     const { isOver } = this.props;
 
-    if (isOver) this.stop();
+    if (isOver) {
+      this.stop();
+      this.clearCommands();
+    }
   }
 
   setTimer() {
@@ -183,6 +186,12 @@ export default class Game extends React.Component {
     this.jump();
   };
 
+  clearCommands() {
+    this.canvas.parentNode.onclick = null;
+    window.onblur = null;
+    window.onfocus = null;
+  }
+
   clear() {
     this.score = 0;
     this.jumpHeight = 0;
@@ -221,7 +230,7 @@ export default class Game extends React.Component {
     }
 
     const { options } = this;
-    const { handleLevel, currentLevel, resetLevel } = this.props;
+    const { handleLevel, currentLevel, resetLevel, totalLevel } = this.props;
 
     const level = Math.min(200, Math.floor(this.score / 100));
     const groundSpeed = (options.groundSpeed + level) / options.fps;
@@ -297,7 +306,11 @@ export default class Game extends React.Component {
       ctx.fillText(`SCORE: ${Math.floor(this.highScore)}`, 30, 13);
     }
     ctx.textAlign = 'right';
-    ctx.fillText(`LEVEL: ${currentLevel}`, this.canvas.width - 20, 13);
+    ctx.fillText(
+      `LEVEL: ${currentLevel}/${totalLevel}`,
+      this.canvas.width - 20,
+      13,
+    );
 
     let pop = 0;
     for (let i = 0; i < this.obstacles.length; ++i) {
@@ -347,8 +360,10 @@ export default class Game extends React.Component {
   }
 
   render() {
+    const { isOver } = this.props;
+
     return (
-      <section className="game">
+      <section className={`game ${isOver ? 'blink' : ''}`}>
         <canvas
           style={{ width: '100%', padding: 0 }}
           id="canvas"
