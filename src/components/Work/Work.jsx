@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
-import projects from '../../assets/sources';
 import { CultureContext } from '../../core/resources';
+import { projects } from '../../core/sources';
 import { ModalInfo } from '../ModalInfo/ModalInfo';
 import { ListProjects } from './ListProjects';
 

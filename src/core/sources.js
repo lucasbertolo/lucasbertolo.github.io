@@ -1,4 +1,4 @@
-const projects = [
+export const projects = [
   {
     name: 'LMS Arquitetura',
     description: {
@@ -44,4 +44,101 @@ const projects = [
   },
 ];
 
-export default projects;
+export const historyTree = [
+  {
+    year: 2010,
+    jobs: [
+      {
+        local: 'Vivo',
+        function: 'consultant',
+      },
+    ],
+  },
+  {
+    year: 2012,
+    jobs: [
+      {
+        local: 'iPlace',
+        function: 'consultant',
+      },
+    ],
+  },
+  {
+    year: 2015,
+    jobs: [
+      {
+        local: 'Orange T.I.',
+        function: 'assistant',
+      },
+    ],
+  },
+  {
+    year: 2016,
+    jobs: [
+      {
+        local: 'freelancer',
+        function: 'dev',
+      },
+    ],
+  },
+  {
+    year: 2017,
+    jobs: [
+      {
+        local: 'ISE',
+        function: 'graduation',
+      },
+    ],
+  },
+  {
+    year: 2019,
+    jobs: [
+      {
+        local: 'Gatec',
+        function: 'dev',
+      },
+      {
+        local: 'IFSP',
+        function: 'graduation',
+      },
+    ],
+  },
+];
+
+export const mainIcons = [
+  {
+    link: 'https://github.com/lucasbertolo',
+    type: 'github',
+  },
+  {
+    link: 'https://www.instagram.com/lucas.bertolo2/',
+    type: 'instagram',
+  },
+  {
+    link: 'https://www.facebook.com/lucas.bertolo2',
+    type: 'facebook',
+  },
+  {
+    link: 'https://www.linkedin.com/in/lucasbertolo2/',
+    type: 'linkedin',
+  },
+  {
+    link: 'https://api.whatsapp.com/send?phone=5519996211991',
+    type: 'whatsapp',
+  },
+];
+
+export const contactIcons = [
+  {
+    link: 'https://github.com/lucasbertolo',
+    type: 'github',
+  },
+  {
+    link: 'https://www.instagram.com/lucas.bertolo2/',
+    type: 'instagram',
+  },
+  {
+    link: 'https://www.linkedin.com/in/lucasbertolo2/',
+    type: 'linkedin',
+  },
+];

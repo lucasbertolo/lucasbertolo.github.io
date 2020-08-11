@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useContext } from 'react';
-import brazil from '../../assets/files/brazil-flag.svg';
-import england from '../../assets/files/england-flag.svg';
+import brazil from '../../assets/images/brazil-flag.svg';
+import england from '../../assets/images/england-flag.svg';
 import { CultureContext } from '../../core/resources';
 
 export const Culture = () => {

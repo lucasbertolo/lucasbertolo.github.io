@@ -1,13 +1,13 @@
 /* eslint-disable no-plusplus */
 import React from 'react';
-import cloud from '../../../assets/files/cloud.png';
-import ground from '../../../assets/files/ground.png';
-import dinosaur from '../../../assets/files/dinosaur.png';
-import dinosaurLeft from '../../../assets/files/dinosaur_left.png';
-import dinosaurRight from '../../../assets/files/dinosaur_right.png';
-import dinosaurDie from '../../../assets/files/dinosaur_die.png';
-import obstacle from '../../../assets/files/obstacle.png';
-import reward from '../../../assets/files/door.png';
+import cloud from '../../assets/images/cloud.png';
+import ground from '../../assets/images/ground.png';
+import dinosaur from '../../assets/images/dinosaur.png';
+import dinosaurLeft from '../../assets/images/dinosaur_left.png';
+import dinosaurRight from '../../assets/images/dinosaur_right.png';
+import dinosaurDie from '../../assets/images/dinosaur_die.png';
+import obstacle from '../../assets/images/obstacle.png';
+import reward from '../../assets/images/door.png';
 
 const STATUS = {
   STOP: 'STOP',
@@ -82,7 +82,6 @@ export default class Game extends React.Component {
     this.jumpHeight = 0;
     this.jumpDelta = 0;
     this.obstaclesBase = 1;
-    this.rewardsBase = 1;
     this.obstacles = this.obstaclesGenerate();
     this.currentDistance = 0;
     this.playerStatus = 0;
@@ -114,6 +113,12 @@ export default class Game extends React.Component {
         onSpacePress();
       }
     };
+    window.onkeyup = e => {
+      if (e.keyCode === 38) {
+        onSpacePress();
+      }
+    };
+
     this.canvas.parentNode.onclick = onSpacePress;
 
     window.onblur = this.pause;
@@ -178,7 +183,6 @@ export default class Game extends React.Component {
     this.currentDistance = 0;
     this.obstacles = [];
     this.obstaclesBase = 1;
-    this.rewardsBase = 1;
     this.playerStatus = 0;
   }
 
@@ -211,7 +215,7 @@ export default class Game extends React.Component {
     }
 
     const { options } = this;
-    const { handleLevel, resetLevel } = this.props;
+    const { handleLevel } = this.props;
 
     const level = Math.min(200, Math.floor(this.score / 100));
     const groundSpeed = (options.groundSpeed + level) / options.fps;
@@ -267,13 +271,10 @@ export default class Game extends React.Component {
       this.jumpDelta = -JUMP_DELTA / 2.7;
     }
 
-    // const scoreText =
-    //   (this.status === STATUS.OVER ? 'GAME OVER  ' : '') +
-    //   Math.floor(this.score);
     ctx.font = 'Bold 18px Arial';
     ctx.textAlign = 'right';
     ctx.fillStyle = '#595959';
-    // ctx.fillText(scoreText, width - 30, 23);
+
     if (this.status === STATUS.START) {
       this.score += 0.5;
       if (this.score > this.highScore) {
@@ -330,7 +331,6 @@ export default class Game extends React.Component {
       firstOffset < 60 + playerWidth &&
       64 - this.jumpHeight + playerHeight > 84
     ) {
-      resetLevel();
       this.stop();
     }
 
@@ -340,7 +340,7 @@ export default class Game extends React.Component {
   render() {
     return (
       <canvas
-        style={{ width: '100%', padding: '0' }}
+        style={{ width: '100%', padding: 0 }}
         id="canvas"
         ref={ref => {
           this.canvas = ref;

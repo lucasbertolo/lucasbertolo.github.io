@@ -5,15 +5,14 @@
 - Spinner
 - Fix package json attr
 - Acessibility
-- Tags
+- Tags git
 - Add env to github
 - put animate on changing language
 - Tests
 - Resort folders
-- change images folder to inside assets
-- move const to sources
 - colour pallete
-- shareable page
+- shareable page - use contact icons
+- minify images
 
 <Jobs>
 
@@ -26,10 +25,15 @@
 
 <History>
 
-- Add full history button
 - change modal name
 - check game's logic to every scenario
-
+- Add description in job
+- Add close button
+- Save in localstorage allowed level
+- lazy load images history and game
+- Message before game
+- Message after game
+- Add full history button
 
 <ErrorPage>
 

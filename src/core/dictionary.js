@@ -23,6 +23,7 @@ export const dictionary = {
     message: 'Mensagem',
     name: 'Nome',
     year: 'ano',
+    consultant: 'Consultor Tecnológico',
   },
   en_US: {
     about: 'About',
@@ -48,5 +49,6 @@ export const dictionary = {
     message: 'Message',
     name: 'Name',
     year: 'year',
+    consultant: 'Tech consultant',
   },
 };

@@ -1,8 +1,9 @@
 import React from 'react';
+import { contactIcons } from '../../core/sources';
 
 export const Social = () => (
   <ul className="icons">
-    {icons.map(icon => (
+    {contactIcons.map(icon => (
       <React.Fragment key={icon.type}>
         <li>
           <a
@@ -19,18 +20,3 @@ export const Social = () => (
     ))}
   </ul>
 );
-
-const icons = [
-  {
-    link: 'https://github.com/lucasbertolo',
-    type: 'github',
-  },
-  {
-    link: 'https://www.instagram.com/lucas.bertolo2/',
-    type: 'instagram',
-  },
-  {
-    link: 'https://www.linkedin.com/in/lucasbertolo2/',
-    type: 'linkedin',
-  },
-];

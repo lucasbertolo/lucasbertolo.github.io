@@ -1,5 +1,5 @@
 import React from 'react';
-import projects from '../../assets/sources';
+import { projects } from '../../core/sources';
 
 export const ListProjects = ({ handleSelect }) => (
   <div className="container-portfolio fadeIn">
