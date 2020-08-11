@@ -1,5 +1,6 @@
 .intro-modal {
     height: 70vh;
+    width: 100%;
     overflow-y: scroll;
 
     .schedule-container {
@@ -10,12 +11,12 @@
 
     ul.main {
         list-style: none;
-        max-width: 75%;
+        max-width: 100%;
         // margin: 20px auto;
     }
 
     .date {
-        width: 17%;
+        width: 20%;
         padding: 7% 1% 0 0;
         float: left;
     }
@@ -31,7 +32,7 @@
 
     .job-description{
         padding-top: 15px;
-        padding-right: 25px;
+        // padding-right: 25px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;

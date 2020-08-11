@@ -5,7 +5,7 @@ import { historyTree } from '../../core/sources';
 import * as icons from './Icons';
 
 export default function HistoryTree({ allowedHistory }) {
-  const { l } = useContext(CultureContext);
+  const { l, culture } = useContext(CultureContext);
 
   const entries = historyTree.sort((a, b) => a.year - b.year);
   const filteredEntries = entries.slice(0, allowedHistory);
@@ -49,6 +49,7 @@ export default function HistoryTree({ allowedHistory }) {
                         <div className="job-description">
                           <h3>{job.local}</h3>
                           <h5>{l(job.function)}</h5>
+                          <p>{job.description[culture]}</p>
                         </div>
                       </div>
                     </li>
