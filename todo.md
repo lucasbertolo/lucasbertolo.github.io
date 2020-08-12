@@ -13,6 +13,7 @@
 - colour pallete
 - shareable page - use contact icons
 - minify images
+- Change tabs names
 
 <Jobs>
 
@@ -22,6 +23,7 @@
 - Update style cover
 - Lighthouse score
 - lazy load images
+- Change tools to technologies
 
 <History>
 
@@ -29,10 +31,14 @@
 - check game's logic to every scenario
 - Add description in job
 - lazy load images history and game
-- Message before game
-- Message after game - trophy get smaller after while
-- restart view after close
-- effect trophy minimize
+- split scss in regions 
+
+<About>
+
+- Personal data description
+- Language details skills
+- Finished Courses
+
 
 <ErrorPage>
 

@@ -101,17 +101,21 @@
         visibility: visible;
         height: 100vh;
     }
-    50%{
+
+    50% {
         height: 100vh;
     }
+
     75% {
         visibility: hidden;
         height: 50vh;
-    } 
-    100%{
+    }
+
+    100% {
         height: 0;
     }
 }
+
 
 .nonVisible {
     animation: hidPanel 10s ease-in-out;

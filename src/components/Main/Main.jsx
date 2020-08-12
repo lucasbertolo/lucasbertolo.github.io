@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Intro from '../Intro/Intro';
+import History from '../Intro/History';
 import Work from '../Work/Work';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
@@ -38,7 +38,7 @@ class Main extends React.PureComponent {
           }`}
           style={{ display: 'none' }}
         >
-          {article === 'intro' && <Intro close={close} />}
+          {article === 'intro' && <History close={close} />}
         </article>
 
         <article

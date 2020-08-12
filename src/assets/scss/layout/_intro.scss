@@ -7,6 +7,7 @@
     padding: 0;
     justify-content: space-between;
 
+
     .game {
         height: 150px;
         width: 100%;
@@ -22,7 +23,7 @@
     .trophy-fig {
         display: flex;
         justify-content: center;
-    } 
+    }
 
     .schedule-container {
         width: 100%;
@@ -93,6 +94,7 @@
     .events-detail li:hover {
         background: rgba(0, 0, 0, 0.5);
     }
+
 
     @media all and (max-width: 641px) {
         .date {

@@ -24,6 +24,9 @@ export const dictionary = {
     name: 'Nome',
     year: 'ano',
     consultant: 'Consultor Tecnológico',
+    giveUpBtn: 'Desistir e ver histórico completo',
+    areYouSureBtn: `Tem certeza que não quer tentar?`,
+    playAgain: 'Jogar outra vez',
   },
   en_US: {
     about: 'About',
@@ -50,5 +53,8 @@ export const dictionary = {
     name: 'Name',
     year: 'year',
     consultant: 'Tech consultant',
+    giveUpBtn: 'Give up and see the whole historic',
+    areYouSureBtn: `Are you sure you don't want to give it a shot?`,
+    playAgain: 'Play Again',
   },
 };

@@ -10,7 +10,7 @@ const STATUS = {
   OPEN: 'OPEN',
 };
 
-const Intro = ({ close }) => {
+export const Intro = () => {
   const LAST_LEVEL = historyTree.length;
   let time = null;
 
@@ -28,9 +28,6 @@ const Intro = ({ close }) => {
       action();
     }, timeOut);
   };
-
-  // TODO - SEPARAR POR REGION SCSS
-  // TODO - TROCAR IMAGEM TROFEU
 
   const resetLevel = () => {
     debouncing(() => setCurrentLevel(0), 500);
@@ -67,8 +64,7 @@ const Intro = ({ close }) => {
     buttonState === STATUS.OPEN || allowedHistory === LAST_LEVEL;
 
   return (
-    <div className="intro-modal">
-      {close}
+    <div className="intro-modal fadeIn">
       <WrapperGame
         buttonState={buttonState}
         status={STATUS}
@@ -97,5 +93,3 @@ const Intro = ({ close }) => {
     </div>
   );
 };
-
-export default Intro;
