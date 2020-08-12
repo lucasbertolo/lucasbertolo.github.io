@@ -52,7 +52,7 @@ export const historyTree = [
         local: 'Vivo',
         function: 'consultant',
         description: {
-          pt_BR: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+          pt_BR: `Consultoria para aparelhos celulares e suas funcionalidades para os clientes.`,
           en_US: 'Testeste testsad',
         },
       },
@@ -65,7 +65,7 @@ export const historyTree = [
         local: 'iPlace',
         function: 'consultant',
         description: {
-          pt_BR: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+          pt_BR: `Consultoria para Iphones e MacOS, por meio de aulas e auxilio no entendimento da tecnologia envolvida`,
           en_US: 'Testeste testsad',
         },
       },
@@ -78,7 +78,7 @@ export const historyTree = [
         local: 'Orange T.I.',
         function: 'assistant',
         description: {
-          pt_BR: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+          pt_BR: `Suporte técnico em servidores Windows/Linux e manutençãod e máquinas`,
           en_US: 'Testeste testsad',
         },
       },
@@ -91,7 +91,7 @@ export const historyTree = [
         local: 'freelancer',
         function: 'dev',
         description: {
-          pt_BR: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+          pt_BR: `Desenvolvimento de websites utilizando diversas tecnologias. Iniciei com Javascript/jQuery, passando depois para projetos mais longos e complexos, utilizando na maior parte das vezes React, Node, PostgreSql`,
           en_US: 'Testeste testsad',
         },
       },
@@ -104,7 +104,7 @@ export const historyTree = [
         local: 'ISE',
         function: 'graduation',
         description: {
-          pt_BR: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+          pt_BR: `Intercâmbio cultural para Irlanda para curso intensivo de inglês. Curso com 8 meses de duração mais a vivencia presencial em busca de melhorar a linguagem.`,
           en_US: 'Testeste testsad',
         },
       },
@@ -117,7 +117,7 @@ export const historyTree = [
         local: 'Gatec',
         function: 'dev',
         description: {
-          pt_BR: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+          pt_BR: `Contratado como desenvolvedor de sistemas, iniciei com projetos em ASP.Net, SQL Server, C#. Além de projetos web utilizando React, Javascript e Mysql. Atualmente continuo na Gatec, e participo do desenvolvimento da versão mobile do SimpleFarm, software de gestão agrícola, utilizando ReactNative, Realm, RestAPI e outros.`,
           en_US: 'Testeste testsad',
         },
       },
@@ -125,7 +125,7 @@ export const historyTree = [
         local: 'IFSP',
         function: 'graduation',
         description: {
-          pt_BR: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.`,
+          pt_BR: `Graduação em curso de Análise e Desenvolvimento de Sistemas pelo Instituto Federal de São Paulo. `,
           en_US: 'Testeste testsad',
         },
       },

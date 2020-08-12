@@ -27,11 +27,8 @@
 
 <History>
 
-- change modal name
-- check game's logic to every scenario
 - Add description in job
 - lazy load images history and game
-- split scss in regions 
 
 <About>
 

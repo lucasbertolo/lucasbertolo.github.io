@@ -1,6 +1,6 @@
 import React from 'react';
 
-import History from '../Intro/History';
+import History from '../History/History';
 import Work from '../Work/Work';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
@@ -32,13 +32,13 @@ class Main extends React.PureComponent {
         style={timeout ? { display: 'flex' } : { display: 'none' }}
       >
         <article
-          id="intro"
-          className={`${article === 'intro' ? 'active' : ''} ${
+          id="history"
+          className={`${article === 'history' ? 'active' : ''} ${
             articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
-          {article === 'intro' && <History close={close} />}
+          {article === 'history' && <History close={close} />}
         </article>
 
         <article

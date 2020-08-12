@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { CultureContext } from '../../core/resources';
 
-const tabs = ['intro', 'work', 'about', 'contact'];
+const tabs = ['history', 'work', 'about', 'contact'];
 
 const Header = ({ onOpenArticle, timeout }) => {
   const { l } = useContext(CultureContext);

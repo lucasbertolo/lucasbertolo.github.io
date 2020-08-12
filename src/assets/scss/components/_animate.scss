@@ -1,4 +1,4 @@
-@keyframes fadeInFromNone {
+@keyframes fadeIn {
     0% {
         opacity: 0;
     }
@@ -140,7 +140,11 @@
 }
 
 .fadeIn {
-    animation: fadeInFromNone 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.longFadeIn {
+    animation: fadeIn 5s ease-in-out;
 }
 
 .fadeOut {

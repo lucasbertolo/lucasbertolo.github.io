@@ -27,7 +27,11 @@ export const UserAction = ({
         </span>
       )}
       {gameOver && (
-        <button onClick={() => setShowTrophy(false)} type="button">
+        <button
+          onClick={() => setShowTrophy(false)}
+          type="button"
+          className="longFadeIn"
+        >
           {l('playAgain')}
         </button>
       )}

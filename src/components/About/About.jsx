@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { CultureContext } from '../../core/resources';
-import { WrapperResume } from './WrapperResume';
+// import { WrapperResume } from './WrapperResume';
 import { Skills } from './Skills';
 
 const About = ({ close }) => {
@@ -9,7 +9,7 @@ const About = ({ close }) => {
     <div className="about-modal">
       <h2 className="major">{l('about')}</h2>
       <Skills />
-      <WrapperResume />
+      {/* <WrapperResume /> */}
       {close}
     </div>
   );

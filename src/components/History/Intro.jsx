@@ -61,7 +61,7 @@ export const Intro = () => {
   };
 
   const historyIsComplete =
-    buttonState === STATUS.OPEN || allowedHistory === LAST_LEVEL;
+    buttonState === STATUS.OPEN || Number(allowedHistory) === LAST_LEVEL;
 
   return (
     <div className="intro-modal fadeIn">
