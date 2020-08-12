@@ -36,7 +36,6 @@ export default function HistoryTree({
   return (
     <div className={`${isOpening ? 'expand' : ''} schedule-container`}>
       <ul className="main">
-        <h3 className="lbl-title">Historico</h3>
         {filteredEntries.map((item, idx) => {
           return (
             <div key={`${item.local}+${idx}`}>

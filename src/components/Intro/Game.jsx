@@ -344,8 +344,8 @@ export default class Game extends React.Component {
       90 - rewardsWidth < firstOffset &&
       firstOffset < 60 + playerWidth
     ) {
-      this.pause();
       handleLevel();
+      this.pause();
       setTimeout(() => this.goOn(), 0);
     } else if (
       90 - obstacleWidth < firstOffset &&

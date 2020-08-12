@@ -38,7 +38,7 @@ class Main extends React.PureComponent {
           }`}
           style={{ display: 'none' }}
         >
-          <Intro close={close} />
+          {article === 'intro' && <Intro close={close} />}
         </article>
 
         <article
