@@ -2,20 +2,7 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { Intro } from './Intro';
 import { CultureContext } from '../../core/resources';
-
-const previewTextBr = [
-  'Este jogo do mano Dinossauro libera acesso ao meu histórico profissional.',
-  'Conforme você vai passando pelas portas, mais um item é liberado.',
-  'Se preferir desistir, você pode apertar o botão de ver tudo e não precisar jogar. <span role="img" aria-label="chicken-img"> 🐔  </span>',
-  'Boa sorte!!!',
-];
-
-const previewText = [
-  'This game was made to allow access to my professional history',
-  'As you are going through the doors, one more item is released',
-  'If you rather give up, you can check the whole history pressing the "see all" button. <span role="img" aria-label="chicken-img"> 🐔  </span>',
-  'Good luck!!!',
-];
+import { historyPreview } from '../../core/sources';
 
 export default function History({ close }) {
   const { culture } = useContext(CultureContext);
@@ -26,13 +13,13 @@ export default function History({ close }) {
     setShowGame(true);
   };
 
-  const source = culture === 'pt_BR' ? previewTextBr : previewText;
+  const source = historyPreview[culture];
 
   const SPEED = 60; // THE LOWER THE FASTER
   const SCROLL_AT = 20;
 
   let iIndex = 0;
-  let iArrLength = previewText[0].length;
+  let iArrLength = source[0].length;
   let iTextPos = 0;
   let sContents = '';
   let iRow;

@@ -8,7 +8,10 @@ export function CultureProvider({ initialCulture, children }) {
   const [updateResources, setUpdateResources] = useState(false);
 
   function updateCulture(res) {
-    if (res) setCulture(res);
+    if (res) {
+      setCulture(res);
+      window.localStorage.lang = res;
+    }
   }
 
   function translateLocal(word) {
@@ -22,7 +25,7 @@ export function CultureProvider({ initialCulture, children }) {
   }
 
   async function handleCulture() {
-    const prevCulture = await window.sessionStorage.getItem('culture');
+    const prevCulture = window.localStorage.lang;
     if (!prevCulture) {
       const lang = 'pt_BR';
       setCulture(lang);

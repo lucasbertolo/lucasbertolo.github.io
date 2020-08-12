@@ -13,7 +13,9 @@
 - colour pallete
 - shareable page - use contact icons
 - minify images
-- Change tabs names
+- Code review
+- auto english for international pages
+- seo checking
 
 <Jobs>
 
@@ -21,21 +23,16 @@
 - Post gifs 
 - Pagination
 - Update style cover
-- Lighthouse score
 - lazy load images
 - Change tools to technologies
+- colors techs
+- Improve descriptions of projects
+- Create function to redirect to tools' pages
 
 <History>
 
 - Add description in job
 - lazy load images history and game
-
-<About>
-
-- Personal data description
-- Language details skills
-- Finished Courses
-
 
 <ErrorPage>
 

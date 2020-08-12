@@ -19,5 +19,7 @@ export default {
     linq: 'Linq',
     aws: 'AWS',
     pwa: 'PWA',
+    heroku: 'Heroku',
+    jquery: 'jQuery',
   },
 };

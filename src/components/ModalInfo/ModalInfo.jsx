@@ -10,7 +10,9 @@ export const ModalInfo = ({ project }) => {
 
   return (
     <div className="modal-info fadeIn">
-      <InfoImage />
+      {!!project.headerImg && (
+        <InfoImage src={project.headerImg} label={project.name} />
+      )}
       <InfoDescription
         name={project.name}
         description={project.description ? project.description[culture] : ''}
