@@ -21,8 +21,10 @@ export const Personal = () => {
       <h5>{l('local')}</h5>
       <p>Piracicaba - SP, Brasil</p>
 
-      <h5>{l('goal')}</h5>
-      <p>Desenvolvedor Web, Mobile, Front-end</p>
+      <h3>{l('goal')}</h3>
+      <h3 className="keywords">
+        {l('webDev')}, {l('mobDev')}, {l('frontDev')}
+      </h3>
     </section>
   );
 };

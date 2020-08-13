@@ -1,6 +1,8 @@
 export const dictionary = {
   pt_BR: {
     webDev: 'Desenvolvedor Web',
+    mobDev: 'Desenvolvedor Mobile',
+    frontDev: 'Desenvolvedor Frontend',
     intro: 'Introdução',
     history: 'Histórico',
     work: 'Portfolio',
@@ -39,6 +41,8 @@ export const dictionary = {
   en_US: {
     about: 'About',
     webDev: 'Web developer',
+    mobDev: 'Mobile developer',
+    frontDev: 'Frontend developer',
     intro: 'Intro',
     history: 'History',
     work: 'Portfolio',
