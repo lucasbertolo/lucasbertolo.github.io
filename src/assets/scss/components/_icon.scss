@@ -1,9 +1,3 @@
-///
-/// Dimension by HTML5 UP
-/// html5up.net | @ajlkn
-/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-///
-
 /* Icon */
 
 .icon {
@@ -28,104 +22,150 @@
 
 .fa-github {
     &:hover {
-        color: #824D86;
+        color: _brands(github);
     }
 }
 
 .fa-instagram {
     &:hover {
-        color: #dc4a38;
+        color: _brands(instagram);
     }
 }
 
 .fa-facebook {
     &:hover {
-        color: #3b5998;
+        color: _brands(facebook);
     }
 }
 
 .fa-linkedin {
     &:hover {
-        color: #A6E6E6;
+        color: _brands(linkedin);
     }
 }
 
 .fa-whatsapp {
     &:hover {
-        color: #329457;
+        color: _brands(whatsapp);
     }
 }
 
 // TAGS
-
 .tag {
     font-family: _font(family-fixed);
     text-transform: uppercase;
 }
 
 .node {
-    background-color: #339933;
+    background-color: _tags(node);
 
     *:first-child {
-        color: #fff;
+        color: _palette(bg-alt);
     }
 
 }
 
-.react, .native {
-    background-color: #61DBFB;
+.react,
+.native {
+    background-color: _tags(react);
 
     *:first-child {
-        color: #000;
+        color: _palette(bg-alt);
     }
 }
 
 .nextjs {
-    background-color: #fff;
+    background-color: _tags(next);
 
     *:first-child {
-        color: #000;
+        color: _palette(bg-alt);
     }
 }
 
 .javascript {
-    background-color: #f0db4f;
+    background-color: _tags(javascript);
 
     *:first-child {
-        color: #323330;
+        color: _palette(bg);
     }
 }
 
 .sass {
-    background-color: #cc6699;
+    background-color: _tags(sass);
 
     *:first-child {
-        color: #fff;
+        color: _palette(fg);
     }
 }
 
 .html5 {
-    background-color: #e44d26;
+    background-color: _tags(html5);
 
     *:first-child {
-        color: #fff;
+        color: _palette(fg);
     }
 }
 
 .sql {
-    background-color: #df831b;
+    background-color: _tags(sql);
 
     *:first-child {
-        color: #fff;
+        color: _palette(fg);
     }
 }
 
-.csharp{
-    background-color: #ac13a4;
+.csharp {
+    background-color: _tags(csharp);
 
     *:first-child {
-        color: #fff;
+        color: _palette(fg);
     }
 }
 
+.pwa {
+    background-color: _tags(pwa);
 
+    *:first-child {
+        color: _palette(fg);
+    }
+}
+
+.gatsby {
+    background-color: _tags(gatsby);
+
+    *:first-child {
+        color: _palette(fg);
+    }
+}
+
+.heroku {
+    background-color: _tags(heroku);
+
+    *:first-child {
+        color: _palette(fg);
+    }
+}
+
+.postgres {
+    background-color: _tags(postgres);
+
+    *:first-child {
+        color: _palette(fg);
+    }
+}
+
+.jquery {
+    background-color: _tags(jquery);
+
+    *:first-child {
+        color: _palette(fg);
+    }
+}
+
+.aws {
+    background-color: _tags(aws);
+
+    *:first-child {
+        color: _palette(fg);
+    }
+}

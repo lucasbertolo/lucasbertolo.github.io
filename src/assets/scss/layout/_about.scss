@@ -3,10 +3,10 @@
         margin: 0 auto 0 auto;
         width: 100%;
         font-family: _font(family-fixed);
-    }
-
-    #skillchart table td:nth-child(odd) {
-        width: 25%;
+        
+        td:nth-child(odd) {
+            width: 25%;
+        }
     }
 
     p {
@@ -34,15 +34,15 @@
             display: flex;
             margin: 2px;
 
-            span:nth-child(2){
+            span:nth-child(2) {
                 margin-left: 50px;
             }
         }
 
-        .keywords{
+        .keywords {
             font-size: 0.8em;
             font-weight: normal;
-            font-style: italic;            
+            font-style: italic;
         }
     }
 }

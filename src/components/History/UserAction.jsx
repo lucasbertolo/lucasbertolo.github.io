@@ -16,7 +16,7 @@ export const UserAction = ({
       {!isComplete && (
         <span className="full-history">
           <button
-            className={buttonState === status.DOUBT ? 'bounce warning-btn' : ''}
+            className={buttonState === status.DOUBT ? 'bounce' : ''}
             onClick={handleDisplayButton}
             type="button"
           >

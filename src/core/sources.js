@@ -51,7 +51,7 @@ export const projects = [
     tools: ['javascript', 'jquery', 'html5'],
   },
   {
-    name: 'Prototipo Americanas',
+    name: 'Americanas',
     description: {
       pt_BR:
         'Protótipo desenvolvido para o concurso Hackathon, propondo uma nova funcionalidade para o aplicativo das Lojas Americanas.',

@@ -8,7 +8,7 @@ export const InfoTools = ({ tools }) => {
   return tools && tools.length > 0 ? (
     <section className="info-tools">
       <fieldset>
-        <h4>{l('tools')}:</h4>
+        <h4>{l('techs')}:</h4>
         <div className="chip-group">
           {tools.map(tool => {
             const Tag = ({ src, label }) => (

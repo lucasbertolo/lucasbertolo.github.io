@@ -41,3 +41,28 @@
 		border-bg:					rgba(255,255,255,0.075),
 		border-bg-alt:				rgba(255,255,255,0.175)
 	);
+
+	$tags: (
+		node: #339933,
+		react: #61DBFB,
+		next: #fff,
+		javascript: #f0db4f,
+		sass: #cc6699,
+		html5: #e44d26,
+		sql:  #df831b,
+		csharp: #ac13a4,
+		pwa: #1022a5,
+		gatsby: #663399,
+		heroku: #79589F,
+		postgres: #336791,
+		jquery:  #0769ad,
+		aws: #f8991d
+	);
+
+	$brands: (
+		github: #824D86,
+		instagram: #dc4a38,
+		facebook: #3b5998,
+        linkedin: #A6E6E6,
+		whatsapp: #329457
+	);

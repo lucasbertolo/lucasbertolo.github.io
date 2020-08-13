@@ -8,7 +8,7 @@ export default {
     graphql: 'Graphql',
     realm: 'Realm',
     mysql: 'Mysql',
-    postgres: 'Postgres',
+    postgres: 'PostgreSQL',
     javascript: 'Javascript',
     sass: 'Sass',
     html5: 'HTML5',

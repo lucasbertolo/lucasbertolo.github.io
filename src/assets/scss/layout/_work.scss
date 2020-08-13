@@ -1,3 +1,5 @@
+/* Work */
+
 $row-size: 200px;
 $row-width: 250px;
 
@@ -39,7 +41,7 @@ $row-width: 250px;
             display: flex;
             justify-content: center;
             visibility: hidden;
-            background-color: rgba(104, 151, 155, 0.8);
+            background-color: _palette(bg-overlay);
 
             p {
                 color: white;
