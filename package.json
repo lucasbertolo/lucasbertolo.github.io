@@ -1,6 +1,5 @@
 {
   "name": "lucasbertolo.github.io",
-  "description": "My portfolio as a web developer",
   "version": "1.0.0",
   "homepage": "https://lucasbertolo.github.io",
   "author": "Lucas Bertolo",
@@ -20,11 +19,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^5.2.1"
-  },
-  "keywords": [
-    "gatsby",
-    "Desenvolvedor Web"
-  ],
+  },  
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -48,6 +43,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/lucasbertolo/lucasbertolo.github.io"
   }
 }

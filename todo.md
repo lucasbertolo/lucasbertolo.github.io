@@ -2,15 +2,10 @@
 
 <General>
 
-- Fix package json attr
 - Tags git
 - Add env to github
 - put animate on changing language
-- Testing
-- Resort folders
 - shareable page - use contact icons
-- minify images
-- Code review
 
 <Jobs>
 
@@ -36,6 +31,9 @@
 ## Improvements
 
 - Check perfomance in profiler
+- Code review
+- Unit test
+
 
 
 
