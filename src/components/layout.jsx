@@ -16,6 +16,9 @@ const Layout = ({ children, location }) => {
     );
   }
 
+  const keywordContent =
+    'curriculo, resume, portfolio, webdeveloper, react, javascript, web, developer, desenvolvedor, Piracicaba, programador, websites';
+
   return (
     <StaticQuery
       query={graphql`
@@ -34,12 +37,11 @@ const Layout = ({ children, location }) => {
             meta={[
               {
                 name: 'description',
-                content: 'Portfolio de desenvolvedor web',
+                content: 'Desenvolvedor web - portfolio de projetos',
               },
               {
                 name: 'keywords',
-                content:
-                  'curriculo, portfolio, webdeveloper, Piracicaba, programador, sites',
+                content: keywordContent,
               },
               {
                 name: 'google-site-verification',
@@ -51,11 +53,11 @@ const Layout = ({ children, location }) => {
               name="google-site-verification"
               content="8mZIUi4SH0aScOPDSJKJq7N5jEIqha6Vhgi2hc5ADcM"
             />
-            <meta name="description" content="Portfolio de desenvolvedor web" />
             <meta
-              name="keywords"
-              content="curriculo, portfolio, webdeveloper, Piracicaba, programador, sites"
+              name="description"
+              content="Desenvolvedor web - Portfolio de projetos Javascript/React"
             />
+            <meta name="keywords" content={keywordContent} />
             <meta name="author" content="Lucas Bertolo" />
             <html lang="pt" />
           </Helmet>

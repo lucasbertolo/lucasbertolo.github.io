@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Lucas Bertolo - Portfolio',
+    title: 'Desenvolvedor Web, portfolio de projetos javascript/react',
     author: 'Lucas Bertolo',
-    description: 'Portfolio de desenvolvedor web',
+    description:
+      'Desenvolvedor Web - Portfolio de projetos Javascript/React de Lucas Bertolo',
     siteUrl: 'https://lucasbertolo.github.io/',
   },
   plugins: [
@@ -10,17 +11,24 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'Lucas Bertolo - Portfolio',
-        short_name: 'Portfolio',
+        name: 'Desenvolvedor Web - Lucas Bertolo',
+        short_name: 'Desenvolvedor web',
         start_url: 'https://lucasbertolo.github.io/',
         background_color: '#663399',
         theme_color: '#663399',
         display: 'minimal-ui',
-        icon: 'src/assets/images/logos/logo.png', // This path is relative to the root of the site.
+        icon: 'src/assets/images/logos/logo.png',
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://lucasbertolo.github.io/`,
       },
     },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-robots-txt',
   ],
 };
