@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../components/layout';
-import { ErrorPage } from '../components/Error/Error';
+import { ErrorPage } from '../components/Helpers/Error';
 import { CultureProvider } from '../core/resources';
 
 const NotFoundPage = () => (

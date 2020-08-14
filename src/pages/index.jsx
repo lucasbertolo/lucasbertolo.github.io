@@ -4,7 +4,7 @@ import Header from '../components/Header/Header';
 import Layout from '../components/layout';
 import Main from '../components/Main/Main';
 import { CultureProvider } from '../core/resources';
-import { Culture } from '../components/Culture/Culture';
+import { Culture } from '../components/Helpers/Culture';
 
 const IndexPage = ({ location }) => {
   const [isArticleVisible, setIsArticleVisible] = useState(false);

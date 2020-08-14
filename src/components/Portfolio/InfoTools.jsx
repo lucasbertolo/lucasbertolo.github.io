@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
-import { CultureContext } from '../../core/resources';
 import enums from '../../core/enums';
+import { CultureContext } from '../../core/resources';
 import { withBacklinks } from './withBacklinks';
 
 export const InfoTools = ({ tools }) => {

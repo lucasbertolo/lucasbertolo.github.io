@@ -1,7 +1,7 @@
 import React from 'react';
 
 import History from '../History/History';
-import Work from '../Work/Work';
+import Portfolio from '../Portfolio/Portfolio';
 import About from '../About/About';
 import Contact from '../Contact/Contact';
 
@@ -42,13 +42,13 @@ class Main extends React.PureComponent {
         </article>
 
         <article
-          id="work"
-          className={`${article === 'work' ? 'active' : ''} ${
+          id="portfolio"
+          className={`${article === 'portfolio' ? 'active' : ''} ${
             articleTimeout ? 'timeout' : ''
           }`}
           style={{ display: 'none' }}
         >
-          <Work close={onCloseArticle} />
+          <Portfolio close={onCloseArticle} />
         </article>
 
         <article
