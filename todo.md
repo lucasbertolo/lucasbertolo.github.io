@@ -9,6 +9,7 @@
 - UserId secret - env github does not work
 - Image shareable
 - analytics
+- improve score images
 
 ## Improvements
 
@@ -27,6 +28,5 @@
 - Post gifs 
 - lazy load images
 - Improve descriptions of projects
-- Lighthouse
 - Fallback imgs
 
