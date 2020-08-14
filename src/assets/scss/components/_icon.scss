@@ -50,6 +50,12 @@
     }
 }
 
+.fa-twitter{
+    &:hover {
+        color: _brands(twitter);
+    }
+}   
+
 // TAGS
 .tag {
     font-family: _font(family-fixed);

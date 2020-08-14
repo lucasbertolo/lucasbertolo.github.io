@@ -5,6 +5,20 @@ module.exports = {
     description:
       'Desenvolvedor Web - Portfolio de projetos Javascript/React de Lucas Bertolo',
     siteUrl: 'https://lucasbertolo.github.io/',
+    keywords: [
+      'curriculo',
+      'resume',
+      'portfolio',
+      'webdeveloper',
+      'react',
+      'javascript',
+      'web',
+      'developer',
+      'desenvolvedor',
+      'Piracicaba',
+      'programador',
+      'websites',
+    ],
   },
   plugins: [
     'gatsby-plugin-react-helmet',
