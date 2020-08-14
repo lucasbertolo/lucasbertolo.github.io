@@ -15,7 +15,7 @@ export default function History({ close }) {
 
   const source = historyPreview[culture];
 
-  const SPEED = 60; // THE LOWER THE FASTER
+  const SPEED = 40; // THE LOWER THE FASTER
   const SCROLL_AT = 20;
 
   let iIndex = 0;

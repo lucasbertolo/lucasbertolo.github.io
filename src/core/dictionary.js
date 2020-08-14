@@ -41,6 +41,7 @@ export const dictionary = {
     mainErrorMsg: 'Parece que estamos tendo alguns problemas',
     subErrorMsg: 'a página que você solicitou não está disponivel',
     goHome: 'Ir para a home',
+    share: 'Compartilhar',
   },
   en_US: {
     about: 'About',
@@ -84,5 +85,6 @@ export const dictionary = {
     mainErrorMsg: `Look like we've had some troubles`,
     subErrorMsg: 'the page you are looking for not available!',
     goHome: 'Go to homepage',
+    share: 'Share',
   },
 };

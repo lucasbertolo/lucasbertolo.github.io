@@ -2,31 +2,29 @@
 
 <General>
 
+- Readme
+- ChangeLog
+- Click outside box to close section
 - Tags git
-- Add env to github
 - put animate on changing language
-- shareable page - use contact icons
+- check seo email
+- UserId secret - env github does not work
+- Image shareable
+- email format checking
+- check other browsers scrolling
 
-<Jobs>
+<Portfolio>
 
 - Update content
 - Post gifs 
 - lazy load images
 - Improve descriptions of projects
-
-<History>
-
-- lazy load images history and game
+- Lighthouse
 
 <ErrorBoundary>
 
 - Add Error boundary
 
-<General>
-
-- Readme
-- ChangeLog
-- Click outside box to close section
 
 ## Improvements
 
