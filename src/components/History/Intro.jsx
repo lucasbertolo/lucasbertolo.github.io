@@ -11,7 +11,7 @@ const STATUS = {
 };
 
 export const Intro = () => {
-  const LAST_LEVEL = historyTree.length;
+  const LAST_LEVEL = 1;
   let time = null;
 
   const [allowedHistory, setAllowedHistory] = useState(
@@ -45,7 +45,7 @@ export const Intro = () => {
 
       if (result === LAST_LEVEL) {
         setGameOver(true);
-        setTimeout(() => setShowTrophy(true), 5000);
+        setTimeout(() => setShowTrophy(true), 3000);
       }
     }, 300);
   };

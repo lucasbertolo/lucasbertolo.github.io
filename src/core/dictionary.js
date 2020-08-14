@@ -42,6 +42,7 @@ export const dictionary = {
     subErrorMsg: 'a página que você solicitou não está disponivel',
     goHome: 'Ir para a home',
     share: 'Compartilhar',
+    exp: 'Experiência',
   },
   en_US: {
     about: 'About',
@@ -86,5 +87,6 @@ export const dictionary = {
     subErrorMsg: 'the page you are looking for not available!',
     goHome: 'Go to homepage',
     share: 'Share',
+    exp: 'Experience',
   },
 };

@@ -8,19 +8,7 @@
 - Tags git
 - UserId secret - env github does not work
 - Image shareable
-- email format checking
-
-<About>
-
-- Label experience in skills
-
-<History>
-
-- Time blinking after winning
-- Increase area of clicking 
-- Animation of historyTree begins before Dino img is gone
-- Button size for mobiles is too big
-- Label history
+- analytics
 
 ## Improvements
 
@@ -28,7 +16,6 @@
 - Check perfomance in profiler
 - Code review
 - Unit test
-
 
 ## Coding
 
