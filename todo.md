@@ -6,21 +6,9 @@
 - ChangeLog
 - Click outside box to close section
 - Tags git
-- put animate on changing language
-- check seo email
 - UserId secret - env github does not work
 - Image shareable
 - email format checking
-- check other browsers design
-
-<Portfolio>
-
-- Update content
-- Post gifs 
-- lazy load images
-- Improve descriptions of projects
-- Lighthouse
-- Fallback imgs
 
 <About>
 
@@ -34,18 +22,24 @@
 - Button size for mobiles is too big
 - Label history
 
-<ErrorBoundary>
-
-- Add Error boundary
-
-
 ## Improvements
 
+- Add Error boundary
 - Check perfomance in profiler
 - Code review
 - Unit test
 
 
+## Coding
 
+- put animate on changing language
 
+<Portfolio>
+
+- Update content
+- Post gifs 
+- lazy load images
+- Improve descriptions of projects
+- Lighthouse
+- Fallback imgs
 
