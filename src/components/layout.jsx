@@ -44,7 +44,7 @@ const Layout = ({ children, location }) => {
         link={[
           {
             rel: 'canonical',
-            href: site.siteMetada.siteUrl,
+            href: site.siteMetadata.siteUrl,
           },
         ]}
         meta={[
