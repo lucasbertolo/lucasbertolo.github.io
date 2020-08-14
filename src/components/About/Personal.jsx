@@ -35,7 +35,7 @@ export const Personal = () => {
           rel="noopener noreferrer"
           aria-label="desenvolvedor-web"
         >
-          {l('webDev')}
+          Desenvolvedor web
         </a>
         , {l('mobDev')}, {l('frontDev')}
       </h3>

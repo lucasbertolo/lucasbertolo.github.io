@@ -34,12 +34,6 @@ module.exports = {
         icon: 'src/assets/images/logos/logo.png',
       },
     },
-    {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        siteUrl: `https://lucasbertolo.github.io/`,
-      },
-    },
     'gatsby-plugin-sass',
     'gatsby-plugin-offline',
     'gatsby-plugin-sitemap',

@@ -11,7 +11,7 @@
 - UserId secret - env github does not work
 - Image shareable
 - email format checking
-- check other browsers scrolling
+- check other browsers design
 
 <Portfolio>
 
@@ -20,6 +20,19 @@
 - lazy load images
 - Improve descriptions of projects
 - Lighthouse
+- Fallback imgs
+
+<About>
+
+- Label experience in skills
+
+<History>
+
+- Time blinking after winning
+- Increase area of clicking 
+- Animation of historyTree begins before Dino img is gone
+- Button size for mobiles is too big
+- Label history
 
 <ErrorBoundary>
 
