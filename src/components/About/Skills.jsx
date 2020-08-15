@@ -39,7 +39,9 @@ export const Skills = () => {
           </table>
         </div>
       </div>
-      <br />
+      <span className="skills-legend">
+        <p>{`*${l('exp')}`}</p>
+      </span>
       <h3>{l('others')}:</h3>
       <p>
         Sass, PWA, Git

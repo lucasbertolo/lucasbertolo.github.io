@@ -1,4 +1,4 @@
-/* History */ 
+/* History */
 
 .intro-modal {
     height: 70vh;
@@ -11,7 +11,7 @@
 
     /* GAME */
     .game {
-        height: 150px;
+        height: 180px;
         width: 100%;
     }
 
@@ -98,7 +98,7 @@
         }
     }
 
-    @media all and (max-width: 641px) {
+    @include breakpoint(small) {
         .date {
             width: 100%;
             border-bottom: 1px solid #ccc;
@@ -115,5 +115,15 @@
             padding: 0;
         }
 
+
+        .full-history {
+            justify-content: center;
+
+            button {
+                font-size: 0.5em;
+            }
+        }
+
     }
+
 }

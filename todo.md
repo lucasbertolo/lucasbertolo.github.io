@@ -3,38 +3,26 @@
 <General>
 
 - Tags git
-- Add env to github
-- put animate on changing language
-- shareable page - use contact icons
+- UserId secret - env github does not work
+- Image shareable
+- analytics
+- improve score images
+- change logo
 
-<Jobs>
+## Improvements
+
+- Click outside box to close section
+- Check perfomance in profiler
+- Unit test
+
+## Coding
+
+- put animate on changing language
+
+<Portfolio>
 
 - Update content
 - Post gifs 
 - lazy load images
 - Improve descriptions of projects
-
-<History>
-
-- lazy load images history and game
-
-<ErrorBoundary>
-
-- Add Error boundary
-
-<General>
-
-- Readme
-- ChangeLog
-- Click outside box to close section
-
-## Improvements
-
-- Check perfomance in profiler
-- Code review
-- Unit test
-
-
-
-
 

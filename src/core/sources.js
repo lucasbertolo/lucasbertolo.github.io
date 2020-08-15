@@ -16,6 +16,8 @@ export const projects = [
       pt_BR: 'Portfolio com meus projetos e informações pessoais.',
       en_US: 'Portfolio with my projects and personal information',
     },
+    score:
+      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/lighthouse_OqIo3XSjMf.png',
     image:
       'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/cage_HkgHJIUXvE.png',
     tools: ['react', 'gatsby', 'pwa', 'sass', 'javascript'],

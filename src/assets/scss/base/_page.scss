@@ -14,6 +14,8 @@
 
 	body {
 		background: _palette(bg);
+		scrollbar-width: 0;          
+		scrollbar-color: transparent; 
 
 		// Prevents animation/transition "flicker" on page load.
 		// Automatically added/removed by js/main.js.
@@ -30,7 +32,8 @@
 	}
 
 	::-webkit-scrollbar {
-		width: 0px;  /* Remove scrollbar space */
-		background: transparent;  /* Optional: just make scrollbar invisible */
+		width: 0;  
+		background: transparent; 
 	}
+
 	

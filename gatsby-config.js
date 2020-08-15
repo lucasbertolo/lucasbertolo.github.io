@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Desenvolvedor Web, portfolio de projetos javascript/react',
+    title:
+      'Desenvolvedor Web - Portfolio de projetos de Lucas Bertolo - Piracicaba/SP',
     author: 'Lucas Bertolo',
-    description:
-      'Desenvolvedor Web - Portfolio de projetos Javascript/React de Lucas Bertolo',
+    description: 'Portfolio de projetos de Lucas Bertolo - Piracicaba/SP',
     siteUrl: 'https://lucasbertolo.github.io/',
     keywords: [
       'curriculo',
@@ -32,12 +32,6 @@ module.exports = {
         theme_color: '#663399',
         display: 'minimal-ui',
         icon: 'src/assets/images/logos/logo.png',
-      },
-    },
-    {
-      resolve: `gatsby-plugin-canonical-urls`,
-      options: {
-        siteUrl: `https://lucasbertolo.github.io/`,
       },
     },
     'gatsby-plugin-sass',

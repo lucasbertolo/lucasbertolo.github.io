@@ -4,8 +4,10 @@
     margin-top: 35px;
 }
 
+
 .icons {
     span {
+        margin-left: 10px;
         border-radius: 100%;
         box-shadow: inset 0 0 0 _size(border-width) _palette(border);
         display: inline-block;
@@ -23,7 +25,7 @@
         }
     }
 
-    button{
+    button {
         box-shadow: none;
     }
 }

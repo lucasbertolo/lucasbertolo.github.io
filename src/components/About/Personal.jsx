@@ -12,11 +12,11 @@ export const Personal = () => {
       <div className="row">
         <span>
           <h5>{l('name')}</h5>
-          <p>Lucas Bertolo</p>
+          <h3 className="keywords">Lucas Bertolo</h3>
         </span>
         <span>
           <h5>{l('age')}</h5>
-          <p>28</p>
+          <h3 className="keywords">28</h3>
         </span>
         <span>
           <figure>
@@ -25,7 +25,7 @@ export const Personal = () => {
         </span>
       </div>
       <h5>{l('local')}</h5>
-      <p>Piracicaba - SP, Brasil</p>
+      <h3 className="keywords">Piracicaba - SP, Brasil</h3>
 
       <h3>{l('goal')}</h3>
       <h3 className="keywords">
@@ -35,7 +35,7 @@ export const Personal = () => {
           rel="noopener noreferrer"
           aria-label="desenvolvedor-web"
         >
-          {l('webDev')}
+          Desenvolvedor web
         </a>
         , {l('mobDev')}, {l('frontDev')}
       </h3>
