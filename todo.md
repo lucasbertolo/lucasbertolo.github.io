@@ -2,20 +2,17 @@
 
 <General>
 
-- Readme
-- ChangeLog
-- Click outside box to close section
 - Tags git
 - UserId secret - env github does not work
 - Image shareable
 - analytics
 - improve score images
+- change logo
 
 ## Improvements
 
-- Add Error boundary
+- Click outside box to close section
 - Check perfomance in profiler
-- Code review
 - Unit test
 
 ## Coding
@@ -28,5 +25,4 @@
 - Post gifs 
 - lazy load images
 - Improve descriptions of projects
-- Fallback imgs
 

@@ -10,7 +10,7 @@ export default function HistoryTree({
 }) {
   const { l, culture } = useContext(CultureContext);
 
-  const entries = historyTree.sort((a, b) => a.year - b.year);
+  const entries = historyTree.sort((a, b) => b.year - a.year);
   const filteredEntries = entries.slice(0, allowedHistory);
 
   const defineSource = source => {
