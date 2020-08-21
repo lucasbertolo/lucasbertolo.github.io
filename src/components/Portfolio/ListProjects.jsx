@@ -11,9 +11,10 @@ export const ListProjects = ({ handleSelect }) => (
         role="presentation"
         key={project.name}
       >
-        <div
+        <img
+          src={project.image}
           className="project-image"
-          style={{ backgroundImage: `url(${project.image})` }}
+          alt="cover-project"
         />
         <span className="cover">
           <p>{project.name}</p>

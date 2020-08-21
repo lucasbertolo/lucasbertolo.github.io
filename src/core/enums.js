@@ -21,5 +21,6 @@ export default {
     pwa: 'PWA',
     heroku: 'Heroku',
     jquery: 'jQuery',
+    vanilla: 'Vanilla.js',
   },
 };

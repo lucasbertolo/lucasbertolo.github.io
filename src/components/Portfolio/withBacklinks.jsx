@@ -52,6 +52,8 @@ function generateLink(name) {
       return 'https://www.heroku.com/';
     case 'jquery':
       return 'https://jquery.com/';
+    case 'vanilla':
+      return 'https://stackoverflow.com/questions/20435653/what-is-vanillajs';
 
     default:
       return null;

@@ -175,3 +175,11 @@
         color: _palette(fg);
     }
 }
+
+.vanilla {
+    background-color: _tags(vanilla);
+
+    *:first-child {
+        color: _palette(fg);
+    }
+}

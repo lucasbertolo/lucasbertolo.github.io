@@ -3,6 +3,7 @@ import { CultureContext } from '../../core/resources';
 import { InfoAction } from './InfoAction';
 import { InfoDescription } from './InfoDescription';
 import { InfoImage } from './InfoImage';
+import { InfoVideo } from './InfoVideo';
 import { InfoTools } from './InfoTools';
 import { InfoScore } from './InfoScore';
 
@@ -11,6 +12,9 @@ export const ModalInfo = ({ project }) => {
 
   return (
     <div className="modal-info fadeIn">
+      {!!project.video && (
+        <InfoVideo src={project.video} label={project.name} />
+      )}
       {!!project.headerImg && (
         <InfoImage src={project.headerImg} label={project.name} />
       )}

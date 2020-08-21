@@ -5,7 +5,8 @@ $margin-modal: 15px;
 
 .modal-info {
 
-    .info-image {
+    .info-image,
+    .info-video {
         width: 100%;
         height: 275px;
         margin: $margin-modal auto;
@@ -15,6 +16,11 @@ $margin-modal: 15px;
             height: 100%;
             width: 100%;
         }
+    }
+
+    .info-video {
+        display: flex;
+        justify-content: center;
     }
 
     .info-tools {

@@ -48,7 +48,7 @@ class Main extends React.PureComponent {
           }`}
           style={{ display: 'none' }}
         >
-          <Portfolio close={onCloseArticle} />
+          {article === 'portfolio' && <Portfolio close={onCloseArticle} />}
         </article>
 
         <article

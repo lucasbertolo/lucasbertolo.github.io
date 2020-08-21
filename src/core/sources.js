@@ -1,97 +1,111 @@
 export const projects = [
   {
+    name: 'Cage the Elephant',
+    description: {
+      pt_BR: `Um dos meus primeiros projetos feito como protótipo/homenagem para uma banda que acho legal. Utilizei Javascript "puro" e Sass neste projeto`,
+      en_US: `One of my first projects done as a prototype / tribute to a band that I think is cool. I used "pure" Javascript and Sass in this project`,
+    },
+    link: 'https://lucasbertolo.github.io/cagetheelephant/',
+    score:
+      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/lighthouse-cage_eARxMYk8ei.png?tr=w-450 450w',
+    image:
+      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/cage-screen_SSo87Zf7z.png?tr=w-280 250w',
+    tools: ['vanilla', 'html5', 'sass'],
+    github: 'https://github.com/lucasbertolo/cagetheelephant',
+  },
+  {
     name: 'LMS Arquitetura',
     description: {
-      pt_BR: `Website para arquiteta apresentar seus projetos`,
-      en_US: 'Website for architect to present their projects',
+      pt_BR: `Website com o portfolio do escritório de arquitetura LMS. O projeto foi construído com React, utilizando Next.js para torná-lo Server Side Rendered.`,
+      en_US: `Website containing LMS architecture firm's portfolio. The project was built with React, using Next.js to make it Server Side Rendered.`,
     },
     link: 'https://lms-arquitetura.com',
-    image:
-      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/lms_By54PI7w4.png',
-    tools: ['react', 'next', 'javascript', 'sass', 'pwa'],
-  },
-  {
-    name: 'portfolio',
-    description: {
-      pt_BR: 'Portfolio com meus projetos e informações pessoais.',
-      en_US: 'Portfolio with my projects and personal information',
-    },
     score:
-      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/lighthouse_OqIo3XSjMf.png',
+      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/lighthouselms_GhCnfscfVv.png?tr=w-450 450w',
     image:
-      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/cage_HkgHJIUXvE.png',
-    tools: ['react', 'gatsby', 'pwa', 'sass', 'javascript'],
-    github: 'https://github.com/lucasbertolo/lucasbertolo.github.io',
-  },
-
-  {
-    name: 'cage',
-    link: 'https://lucasbertolo.github.io/cage-the-elephant/',
-    image:
-      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/cage_HkgHJIUXvE.png',
-    tools: ['react', 'javascript', 'html5', 'sass'],
-    github: 'https://github.com/lucasbertolo/cage-the-elephant',
-  },
-  {
-    name: 'robofriends',
-    link: 'https://lucasbertolo.github.io/robofriends/',
-    image:
-      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/robofriends_rJE1ILmP4.png',
-  },
-  {
-    name: 'brainth',
-    link: 'https://brainth.herokuapp.com',
-    image:
-      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/brainth_rJLJLIQw4.png',
-    tools: ['react', 'javascript', 'heroku', 'postgres'],
-  },
-  {
-    name: 'Gallery Photo',
-    link: '#',
-    image:
-      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/gallery_rkSyUUXDN.png',
-    tools: ['javascript', 'jquery', 'html5'],
-  },
-  {
-    name: 'Americanas',
-    description: {
-      pt_BR:
-        'Protótipo desenvolvido para o concurso Hackathon, propondo uma nova funcionalidade para o aplicativo das Lojas Americanas.',
-      en_US:
-        'Prototype developed for the Hackathon contest, proposing a new functionality for the application of Lojas Americas.',
-    },
-    tools: ['native', 'csharp', 'javascript'],
-    image:
-      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/gallery_rkSyUUXDN.png',
-    github: 'https://github.com/eduardohfs/MegahackTime30',
+      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/lmsscreen__D0x7rZiD.jpg?tr=w-250 250w',
+    tools: ['react', 'next', 'javascript', 'sass', 'pwa'],
   },
   {
     name: 'Remax/Portal',
     link: 'https://portal-edrio4xcb.now.sh/',
     description: {
       pt_BR:
-        'Website desenvolvido para trabalho de conclusão de curso e para a empresa Remax/Portal como prototipo',
+        'Este projeto foi desenvolvido para trabalho de conclusão de curso e para a empresa Remax/Portal como prototipo. Utilizei Node.js/PostgreSql/AWS para o cadastro das informações das imobiliaria. No frontend, React/Next.js aproveitando do Server Side Rendered para desempenho e SEO.',
       en_US:
-        'Website developed for course completion work and for the company Remax / Portal as a prototype',
+        'This project was developed for my graduation and for the company Remax/Portal as a prototype. I used Node.js/PostgreSql/AWS to register the real estate information. On the front-end, React / Next.js taking advantage of Server Side Rendered for performance and SEO.',
     },
     tools: ['react', 'next', 'aws', 'node', 'postgres', 'sass'],
     image:
-      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/gallery_rkSyUUXDN.png',
+      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/portalscreen_l3_YvzOXTg.png?tr=w-250 250w',
   },
   {
-    name: 'ColorPicker',
-    link: 'https://lucasbertolo.github.io/react-gradient/',
+    name: 'Lojas Americanas',
     description: {
       pt_BR:
-        'Projeto que permite ao usuário escolher várias cores para formar um gradiente, salvando os resultando em um banco de dados temporario',
+        'Protótipo desenvolvido para o concurso Hackathon, propondo uma nova funcionalidade para o aplicativo das Lojas Americanas. Foi um trabalho em equipe, onde em 2 dias teríamos que apresentar um aplicativo com determinada funcionalidade. Usamos C# na API e React Native para o mobile. O código está aberto no link abaixo, além do gif com um pouco do trabalho',
       en_US:
-        'Project that allows the user to choose several colors to form a gradient, saving them resulting in a temporary database',
+        'Prototype developed for the Hackathon contest, proposing a new functionality for the Lojas Americanas application. It was a team effort, where in 2 days we would have to present an application with a certain functionality. We use C # in the API and React Native for mobile. The code is open at the link below, in addition to the gif with a little bit of work',
     },
-    tools: ['react', 'javascript', 'html5'],
+    tools: ['native', 'csharp', 'javascript'],
+    video:
+      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/20200821_000625_ZjVunk77l.webm',
     image:
-      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/gallery_rkSyUUXDN.png',
-    github: 'https://github.com/lucasbertolo/legenda',
+      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/americanasscreen_dd6UHwRan.jpg',
+    github: 'https://github.com/eduardohfs/MegahackTime30',
   },
+
+  {
+    name: 'Portfolio',
+    description: {
+      pt_BR:
+        'Fiz meu portfolio, que é este website, buscando mostrar minha carreira e habilidades, e deixar uma coisa mais interativa. Por isso o jogo na seção de história, além do design mais colorido nessa segunda versão. Desenvolvi este projeto utilizando React com Gatsby. ',
+      en_US:
+        'I made my portfolio, which is this website, seeking to show my career and skills, and make something more interactive. So the game in the history section, in addition to the more colorful design in this second version. I developed this project using React/ Gatsby.',
+    },
+    score:
+      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/lighthouse-port_GRE3-3sCjw.png?tr=w-450 450w',
+    image:
+      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/port-screen_vE3K2Yv1po.png?tr=w-250 250w',
+    tools: ['react', 'gatsby', 'pwa', 'sass', 'javascript'],
+    github: 'https://github.com/lucasbertolo/lucasbertolo.github.io',
+  },
+
+  // {
+  //   name: 'robofriends',
+  //   link: 'https://lucasbertolo.github.io/robofriends/',
+  //   image:
+  //     'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/robofriends_rJE1ILmP4.png',
+  // },
+  // {
+  //   name: 'brainth',
+  //   link: 'https://brainth.herokuapp.com',
+  //   image:
+  //     'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/brainth_rJLJLIQw4.png',
+  //   tools: ['react', 'javascript', 'heroku', 'postgres'],
+  // },
+  // {
+  //   name: 'Gallery Photo',
+  //   link: '#',
+  //   image:
+  //     'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/gallery_rkSyUUXDN.png',
+  //   tools: ['javascript', 'jquery', 'html5'],
+  // },
+
+  // {
+  //   name: 'ColorPicker',
+  //   link: 'https://lucasbertolo.github.io/react-gradient/',
+  //   description: {
+  //     pt_BR:
+  //       'Projeto que permite ao usuário escolher várias cores para formar um gradiente, salvando os resultando em um banco de dados temporario',
+  //     en_US:
+  //       'Project that allows the user to choose several colors to form a gradient, saving them resulting in a temporary database',
+  //   },
+  //   tools: ['react', 'javascript', 'html5'],
+  //   image:
+  //     'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/gallery_rkSyUUXDN.png',
+  //   github: 'https://github.com/lucasbertolo/legenda',
+  // },
 ];
 
 export const historyTree = [

@@ -44,7 +44,7 @@ export const Skills = () => {
       </span>
       <h3>{l('others')}:</h3>
       <p>
-        Sass, PWA, Git
+        Sass, PWA, Git, Webpack
         <br />
         Redux, Next.js, Gatsby.js, GraphQl
         <br />

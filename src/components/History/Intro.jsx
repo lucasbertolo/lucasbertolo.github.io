@@ -11,7 +11,7 @@ const STATUS = {
 };
 
 export const Intro = () => {
-  const LAST_LEVEL = 1;
+  const LAST_LEVEL = historyTree.length;
   let time = null;
 
   const [allowedHistory, setAllowedHistory] = useState(
