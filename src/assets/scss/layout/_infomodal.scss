@@ -7,13 +7,23 @@ $margin-modal: 15px;
 
     .info-image,
     .info-video {
-        width: 100%;
+        overflow-x: hidden;
+        max-width: 100%;
         height: 275px;
         margin: $margin-modal auto;
 
         figure,
         img {
-            height: 100%;
+           background-position: center;
+           background-size: contain;
+        }
+    }
+
+    .info-score {
+        overflow-x: hidden;
+        max-width: 100%;
+
+        img{
             width: 100%;
         }
     }
@@ -34,6 +44,12 @@ $margin-modal: 15px;
         a {
             padding: 10px;
             border: none;
+        }
+    }
+
+    @include breakpoint(medium) {        
+        .info-video {
+            display: none;
         }
     }
 }

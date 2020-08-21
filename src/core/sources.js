@@ -9,7 +9,7 @@ export const projects = [
     score:
       'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/lighthouse-cage_eARxMYk8ei.png?tr=w-450 450w',
     image:
-      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/cage-screen_SSo87Zf7z.png?tr=w-280 250w',
+      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/cage-screen_SSo87Zf7z.png?tr=w-200 200w',
     tools: ['vanilla', 'html5', 'sass'],
     github: 'https://github.com/lucasbertolo/cagetheelephant',
   },
@@ -23,7 +23,7 @@ export const projects = [
     score:
       'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/lighthouselms_GhCnfscfVv.png?tr=w-450 450w',
     image:
-      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/lmsscreen__D0x7rZiD.jpg?tr=w-250 250w',
+      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/lmsscreen__D0x7rZiD.jpg?tr=w-200 200w',
     tools: ['react', 'next', 'javascript', 'sass', 'pwa'],
   },
   {
@@ -37,21 +37,25 @@ export const projects = [
     },
     tools: ['react', 'next', 'aws', 'node', 'postgres', 'sass'],
     image:
-      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/portalscreen_l3_YvzOXTg.png?tr=w-250 250w',
+      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/portalscreen_l3_YvzOXTg.png?tr=w-200 200w',
   },
   {
     name: 'Lojas Americanas',
     description: {
       pt_BR:
-        'Protótipo desenvolvido para o concurso Hackathon, propondo uma nova funcionalidade para o aplicativo das Lojas Americanas. Foi um trabalho em equipe, onde em 2 dias teríamos que apresentar um aplicativo com determinada funcionalidade. Usamos C# na API e React Native para o mobile. O código está aberto no link abaixo, além do gif com um pouco do trabalho',
+        'Protótipo desenvolvido para o concurso Hackathon, propondo uma nova funcionalidade para o aplicativo das Lojas Americanas. Foi um trabalho em equipe, onde em 2 dias teríamos que apresentar um aplicativo com determinada funcionalidade. Usamos C# na API e React Native para o mobile. O código está aberto no link abaixo com um pouco do trabalho',
       en_US:
-        'Prototype developed for the Hackathon contest, proposing a new functionality for the Lojas Americanas application. It was a team effort, where in 2 days we would have to present an application with a certain functionality. We use C # in the API and React Native for mobile. The code is open at the link below, in addition to the gif with a little bit of work',
+        'Prototype developed for the Hackathon contest, proposing a new functionality for the Lojas Americanas application. It was a team effort, where in 2 days we would have to present an application with a certain functionality. We use C # in the API and React Native for mobile. The code is open at the link below with a little bit of work',
     },
     tools: ['native', 'csharp', 'javascript'],
-    video:
-      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/20200821_000625_ZjVunk77l.webm',
+    video: {
+      mp4:
+        'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/20200821_000625__1__9fRjS3Z5M.mp4',
+      webm:
+        'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/20200821_000625_ZjVunk77l.webm',
+    },
     image:
-      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/americanasscreen_dd6UHwRan.jpg',
+      'https://ik.imagekit.io/2agnc6wu5cbty/lucasbertolo/americanasscreen_dd6UHwRan.jpg?tr=w-200 200w',
     github: 'https://github.com/eduardohfs/MegahackTime30',
   },
 
