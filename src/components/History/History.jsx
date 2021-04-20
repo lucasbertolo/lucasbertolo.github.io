@@ -26,6 +26,7 @@ export default function History({ close }) {
 
   function typewriter() {
     const destination = document.getElementById('typedtext');
+
     if (destination) {
       sContents = ' ';
       iRow = Math.max(0, iIndex - SCROLL_AT);
@@ -33,11 +34,14 @@ export default function History({ close }) {
       while (iRow < iIndex) {
         sContents += `${source[iRow++]}<br />`;
       }
+
       destination.innerHTML = `${sContents +
         source[iIndex].substring(0, iTextPos)}_`;
+
       if (iTextPos++ === iArrLength) {
         iTextPos = 0;
         iIndex++;
+
         if (iIndex !== source.length) {
           iArrLength = source[iIndex].length;
           setTimeout(() => typewriter(), 500);

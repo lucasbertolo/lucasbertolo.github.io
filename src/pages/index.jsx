@@ -14,28 +14,28 @@ const IndexPage = ({ location }) => {
   const [loading, setLoading] = useState('is-loading');
 
   const handleCloseArticle = () => {
-    setArticleTimeout(!articleTimeout);
+    setArticleTimeout(false);
 
     setTimeout(() => {
-      setTimer(!timer);
+      setTimer(false);
     }, 325);
 
     setTimeout(() => {
-      setIsArticleVisible(!isArticleVisible);
+      setIsArticleVisible(false);
       setArticle('');
     }, 350);
   };
 
   const handleOpenArticle = name => {
-    setIsArticleVisible(!isArticleVisible);
+    setIsArticleVisible(true);
     setArticle(name);
 
     setTimeout(() => {
-      setTimer(!timer);
+      setTimer(true);
     }, 325);
 
     setTimeout(() => {
-      setArticleTimeout(!articleTimeout);
+      setArticleTimeout(true);
     }, 350);
   };
 
@@ -52,8 +52,10 @@ const IndexPage = ({ location }) => {
       >
         <CultureProvider>
           {article === '' && <Culture />}
+
           <div id="wrapper">
             <Header onOpenArticle={handleOpenArticle} timeout={timer} />
+
             <Main
               isArticleVisible={isArticleVisible}
               timeout={timer}
@@ -61,8 +63,10 @@ const IndexPage = ({ location }) => {
               article={article}
               onCloseArticle={handleCloseArticle}
             />
+
             <Footer timeout={timer} />
           </div>
+
           <div id="bg" />
         </CultureProvider>
       </div>
